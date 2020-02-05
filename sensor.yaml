@@ -1,0 +1,113 @@
+  # Weather
+  - platform: darksky
+    api_key: !secret dark_sky_api_password
+    language: 'de'
+    forecast:
+      - 0
+    monitored_conditions:
+      - summary
+      - temperature
+      - hourly_summary
+      - temperature_high
+      - wind_speed
+      - humidity
+      - pressure
+      - temperature_low
+      - precip_intensity
+      - icon
+
+  # HA stats
+  - platform: systemmonitor
+    resources:
+      - type: memory_use_percent
+      - type: processor_use
+      - type: disk_use_percent
+        arg: /
+
+  - platform: rest
+    resource: https://trash-service.marvin-wichmann.de/trash
+    name: trash_appointment
+    value_template: '{{ value_json.name }}'
+
+  - platform: rest
+    resource: https://reminder-service.marvin-wichmann.de/reminders/pill
+    name: pill_reminder
+    value_template: '{{ value_json.hoursLeft }}'
+
+  - platform: rest
+    resource: https://reminder-service.marvin-wichmann.de/reminders/daily
+    name: daily_reminder
+    value_template: '{{ value_json.hoursLeft }}'
+
+  - platform: rest
+    resource: https://trash-service.marvin-wichmann.de/trash/days
+    name: trash_appointment_days
+
+  # HVAC controller states
+  - platform: knx
+    name: Stellventil.Bad
+    state_address: '3/2/0'
+    type: 'percent'
+
+  - platform: knx
+    name: Stellventil.WC
+    state_address: '3/2/1'
+    type: 'percent'
+
+  - platform: knx
+    name: Stellventil.Buero1
+    state_address: '3/2/2'
+    type: 'percent'
+
+  - platform: knx
+    name: Stellventil.Buero2
+    state_address: '3/2/3'
+    type: 'percent'
+
+  - platform: knx
+    name: Stellventil.Abstellraum
+    state_address: '3/2/4'
+    type: 'percent'
+
+  - platform: knx
+    name: Stellventil.Wohnen1
+    state_address: '3/2/5'
+    type: 'percent'
+
+  - platform: knx
+    name: Stellventil.Wohnen2
+    state_address: '3/2/6'
+    type: 'percent'
+
+  - platform: knx
+    name: Stellventil.Wohnen3
+    state_address: '3/2/7'
+    type: 'percent'
+
+  - platform: knx
+    name: Stellventil.Kueche
+    state_address: '3/2/8'
+    type: 'percent'
+
+  - platform: knx
+    name: Stellventil.Gast
+    state_address: '3/2/9'
+    type: 'percent'
+
+  - platform: knx
+    name: Stellventil.Schlafzimmer
+    state_address: '3/2/10'
+    type: 'percent'
+
+  - platform: template
+    sensors:
+        garage_door_status:
+            friendly_name: 'Torstatus'
+            value_template: '{{ states.cover.garage.state }}'
+        garage_door_time_in_state:
+            friendly_name: 'Seit'
+            value_template: '{{ states.cover.garage.attributes.time_in_state }}'
+        garage_door_wifi_signal_strength:
+            friendly_name: 'WiFi Signalstärke'
+            value_template: '{{ states.cover.garage.attributes.wifi_signal_strength }}'
+            unit_of_measurement: 'dB'

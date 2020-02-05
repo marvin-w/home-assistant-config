@@ -1,0 +1,21 @@
+  - platform: knx
+    name: spotify_automation
+    state_address: '6/0/0'
+    automation:
+      - counter: 1
+        hook: 'on'
+        action:
+          - entity_id: media_player.spotify
+            service: media_player.select_source
+            data:
+              source: 'Stereoanlage'
+          - entity_id: media_player.spotify
+            service: media_player.play_media
+            data:
+              media_content_type: 'playlist'
+              media_content_id: 'spotify:user:spotify:playlist:37i9dQZF1DXdPec7aLTmlC' # play "Happy Hits" by "Spotify"
+      - counter: 1
+        hook: 'off'
+        action:
+          - entity_id: media_player.spotify
+            service: media_player.media_pause

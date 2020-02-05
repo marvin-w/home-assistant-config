@@ -1,0 +1,248 @@
+title: Home
+views:
+  - id: general
+    title: Übersicht
+    cards:
+      - id: general
+        title: Übersicht
+        type: entities
+        entities:
+            - sensor.trash_appointment
+            - device_tracker.marvin_wichmann_handy_2
+            - switch.ac
+            - switch.flur_sperrfunktion
+            - light.flur
+            - cover.covers
+      - id: garage
+        title: Garage
+        type: entities
+        show_header_toggle: false
+        entities:
+            - cover.garage
+            - sensor.garage_door_status
+            - sensor.garage_door_time_in_state
+            - sensor.garage_door_wifi_signal_strength
+      - id: weather
+        title: Wetter
+        type: weather-forecast
+        entity: weather.ersingen
+  - id: wohnung
+    title: Wohnzimmer
+    icon: ''
+    cards:
+        - id: functions_w
+          title: Funktionen
+          type: entities
+          entities:
+              - cover.wohnen_fenster
+              - cover.wohnen_balkon
+              - light.kueche_leiste
+              - media_player.livingroom_tv
+              - media_player.receiver
+              - media_player.spotify
+              - switch.wohnzimmer_stereoanlage
+              - switch.balkon2_steckdose
+        - id: thermostatwohn
+          title: Wohnzimmer Temperatur
+          type: thermostat
+          entity: climate.wohn
+        - id: sternenhimmel
+          title: Sternenhimmel
+          type: light
+          entity: light.wohnzimmer_sternenhimmel
+        - id: schrage
+          title: Licht Fernseher
+          type: light
+          entity: light.wohnzimmer_schraege
+        - id: esszimmer
+          title: Esszimmer
+          type: light
+          entity: light.esszimmer
+        - id: wohnzimmerwand
+          title: Wandleuchte
+          type: light
+          entity: light.wohnzimmer_wand
+  - id: kueche
+    title: Küche
+    icon: ''
+    cards:
+    - id: functions_kueche
+      title: Funktionen
+      type: entities
+      entities:
+      - cover.kueche
+      - switch.kueche_abzug
+      - light.kueche
+    - id: thermostatkueche
+      title: Küche Temperatur
+      type: thermostat
+      entity: climate.kueche
+  - id: bad
+    title: Bad
+    icon: ''
+    cards:
+    - id: functions_bad
+      title: Funktionen
+      type: entities
+      entities:
+      - cover.dach_bad
+      - switch.wohnzimmer_stereoanlage
+      - light.bad_spiegel
+      - media_player.receiver_zone_2
+    - id: thermostatbad
+      title: Bad Temperatur
+      type: thermostat
+      entity: climate.bad
+    - id: badlicht
+      title: Deckenlicht
+      type: light
+      entity: light.bad
+  - id: schlafzimmer
+    title: Schlafzimmer
+    icon: ''
+    cards:
+    - id: functions_sz
+      title: Funktionen
+      type: entities
+      entities:
+      - cover.schlafzimmer
+      - switch.schlafzimmer_steckdose_marvin
+      - switch.schlafzimmer_wand_strom
+    - id: thermostatsz
+      title: Schlafzimmer Temperatur
+      type: thermostat
+      entity: climate.schlaf
+    - id: lichtsz
+      title: Deckenlicht
+      type: light
+      entity: light.schlafzimmer
+  - id: buero
+    title: Büro
+    icon: ''
+    cards:
+    - id: functions_buero
+      title: Funktionen
+      type: entities
+      entities:
+      - light.buero
+      - switch.buero_steckdose
+      - switch.pc_plug_12a_switch
+    - id: thermostatbuero
+      title: Büro Temperatur
+      type: thermostat
+      entity: climate.buero
+  - id: wc
+    title: WC
+    icon: ''
+    cards:
+    - id: functions_wc
+      title: Funktionen
+      type: entities
+      entities:
+      - light.wc
+      - cover.dach_wc
+  - id: gast
+    title: Gast
+    icon: ''
+    cards:
+    - id: gast_functions
+      title: Funktionen
+      type: entities
+      entities:
+        - light.gaestezimmer
+        - cover.gast
+    - id: thermostatgaeste
+      title: Gast Temperatur
+      type: thermostat
+      entity: climate.gast
+  - id: monitoring
+    title: Monitoring
+    icon: ''
+    badhes: []
+    cards:
+        - id: synology
+          title: Synology NAS
+          type: entities
+          entities:
+            - sensor.disk_use_percent
+            - sensor.memory_use_percent
+        - id: electrical
+          title: Strom
+          hours_to_show: 96
+          type: history-graph
+          entities:
+            - entity: sensor.pc_power_usage
+              name: PC
+            - entity: sensor.network_power_usage
+              name: Netzwerkgeräte
+  - id: heating
+    title: Heizung
+    icon: ''
+    badges: []
+    cards:
+        - id: ventilwohnen1
+          name: Stellventil Wohnen 1
+          type: sensor
+          graph: line
+          icon: 'mdi:radiator'
+          entity: sensor.stellventil_wohnen1
+        - id: ventilwohnen2
+          name: Stellventil Wohnen 2
+          type: sensor
+          graph: line
+          icon: 'mdi:radiator'
+          entity: sensor.stellventil_wohnen2
+        - id: ventilwohnen3
+          name: Stellventil Wohnen 3
+          type: sensor
+          graph: line
+          icon: 'mdi:radiator'
+          entity: sensor.stellventil_wohnen3
+        - id: ventilbad
+          name: Stellventil Bad
+          type: sensor
+          graph: line
+          icon: 'mdi:radiator'
+          entity: sensor.stellventil_bad
+        - id: ventilwc
+          name: Stellventil WC
+          type: sensor
+          graph: line
+          icon: 'mdi:radiator'
+          entity: sensor.stellventil_wc
+        - id: ventilbuero1
+          name: Stellventil Büro 1
+          type: sensor
+          graph: line
+          icon: 'mdi:radiator'
+          entity: sensor.stellventil_buero1
+        - id: ventilbuero2
+          name: Stellventil Büro 2
+          type: sensor
+          graph: line
+          icon: 'mdi:radiator'
+          entity: sensor.stellventil_buero2
+        - id: ventilabstellraum
+          name: Stellventil Abstellraum
+          type: sensor
+          graph: line
+          icon: 'mdi:radiator'
+          entity: sensor.stellventil_abstellraum
+        - id: ventilkueche
+          name: Stellventil Küche
+          type: sensor
+          graph: line
+          icon: 'mdi:radiator'
+          entity: sensor.stellventil_kueche
+        - id: ventilgast
+          name: Stellventil Gästezimmer
+          type: sensor
+          graph: line
+          icon: 'mdi:radiator'
+          entity: sensor.stellventil_gast
+        - id: ventilschlafzimmer
+          name: Stellventil Schlafzimmer
+          type: sensor
+          graph: line
+          icon: 'mdi:radiator'
+          entity: sensor.stellventil_schlafzimmer

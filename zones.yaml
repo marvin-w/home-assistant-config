@@ -1,0 +1,23 @@
+  - name: Home
+    latitude: !secret latitude
+    longitude: !secret longitude
+    radius: 450
+    icon: mdi:home
+
+  - name: Work
+    latitude: !secret work_latitude
+    longitude: !secret work_longitude
+    radius: 200
+    icon: mdi:domain
+
+  - name: Parents
+    latitude: !secret parents_latitude
+    longitude: !secret parents_longitude
+    radius: 200
+    icon: mdi:home
+
+  - name: !secret zone_gf_name
+    latitude: !secret gf_latitude
+    longitude: !secret gf_longitude
+    radius: 200
+    icon: mdi:home

@@ -1,0 +1,14 @@
+  - platform: onkyo
+    host: !secret onkyo_host
+    name: receiver
+    max_volume: 80
+    sources:
+      tv: 'TV'
+      network: 'Network'
+
+  - platform: spotify
+    client_id: !secret spotify_client_id
+    client_secret: !secret spotify_secret_id
+    aliases:
+      0452515d35fda3cc29e9b9a372ad22d5066bacce: Stereoanlage
+      b981bdf1201a4347276e6ba5302067d5317b8e3a: Macbook

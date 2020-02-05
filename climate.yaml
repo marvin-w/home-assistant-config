@@ -1,0 +1,84 @@
+  - platform: knx
+    name: schlaf
+    operation_mode_frost_protection_address: '3/1/0'
+    temperature_address: '3/1/1'
+    operation_mode_comfort_address: '3/1/2'
+    operation_mode_night_address: '3/1/3'
+    target_temperature_address: '3/1/6'
+    target_temperature_state_address: '3/1/4'
+    controller_status_state_address: '3/1/5'
+    min_temp: 7.0
+    max_temp: 35.0
+
+  - platform: knx
+    name: bad
+    operation_mode_frost_protection_address: '3/1/12'
+    temperature_address: '3/1/13'
+    operation_mode_comfort_address: '3/1/14'
+    operation_mode_night_address: '3/1/15'
+    target_temperature_address: '3/1/7'
+    target_temperature_state_address: '3/1/16'
+    controller_status_state_address: '3/1/17'
+    min_temp: 7.0
+    max_temp: 35.0
+
+  - platform: knx
+    name: kueche
+    operation_mode_frost_protection_address: '3/1/18'
+    temperature_address: '3/1/19'
+    operation_mode_comfort_address: '3/1/20'
+    operation_mode_night_address: '3/1/21'
+    target_temperature_address: '3/1/8'
+    target_temperature_state_address: '3/1/22'
+    controller_status_state_address: '3/1/23'
+    min_temp: 7.0
+    max_temp: 35.0
+
+  - platform: knx
+    name: wohn
+    operation_mode_frost_protection_address: '3/1/24'
+    temperature_address: '3/1/25'
+    operation_mode_comfort_address: '3/1/26'
+    operation_mode_night_address: '3/1/27'
+    target_temperature_address: '3/1/9'
+    target_temperature_state_address: '3/1/28'
+    controller_status_state_address: '3/1/29'
+    min_temp: 7.0
+    max_temp: 35.0
+
+  - platform: knx
+    name: buero
+    operation_mode_frost_protection_address: '3/1/30'
+    temperature_address: '3/1/31'
+    operation_mode_comfort_address: '3/1/32'
+    operation_mode_night_address: '3/1/33'
+    target_temperature_address: '3/1/10'
+    target_temperature_state_address: '3/1/34'
+    controller_status_state_address: '3/1/35'
+    min_temp: 7.0
+    max_temp: 35.0
+
+  - platform: knx
+    name: gast
+    operation_mode_frost_protection_address: '3/1/36'
+    temperature_address: '3/1/37'
+    operation_mode_comfort_address: '3/1/38'
+    operation_mode_night_address: '3/1/39'
+    target_temperature_address: '3/1/11'
+    target_temperature_state_address: '3/1/40'
+    controller_status_state_address: '3/1/41'
+    min_temp: 7.0
+    max_temp: 35.0
+
+  - platform: knx
+    name: abstell
+    operation_mode_frost_protection_address: '3/1/42'
+    temperature_address: '3/1/43'
+    operation_mode_comfort_address: '3/1/44'
+    operation_mode_night_address: '3/1/45'
+    target_temperature_address: '3/1/48'
+    target_temperature_state_address: '3/1/46'
+    controller_status_state_address: '3/1/47'
+    min_temp: 7.0
+    max_temp: 35.0
+

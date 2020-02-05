@@ -1,0 +1,36 @@
+  - platform: knx
+    name: 'Kueche.Abzug'
+    address: '1/0/18'
+    state_address: '5/0/2'
+
+  - platform: knx
+    name: 'Wohnzimmer.Stereoanlage'
+    address: '1/0/28'
+    state_address: '5/0/2'
+
+  - platform: knx
+    name: 'Schlafzimmer.Steckdose.Marvin'
+    address: '1/0/3'
+    state_address: '5/0/2'
+
+  - platform: knx
+    name: 'Schlafzimmer.Wand.Strom'
+    address: '1/0/5'
+    state_address: '5/0/2'
+
+  - platform: knx
+    name: 'AC'
+    address: '4/0/0'
+
+  - platform: knx
+    name: 'Balkon2.Steckdose'
+    address: '1/0/30'
+    state_address: '5/0/2'
+
+  - platform: knx
+    name: 'Buero.Steckdose'
+    address: '1/0/33'
+
+  - platform: knx
+    name: 'Flur.Sperrfunktion'
+    address: '1/0/44'

@@ -1,0 +1,103 @@
+homeassistant:
+  name: Daheim
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: !secret elevation
+  unit_system: metric
+  time_zone: Europe/Berlin
+  customize: !include customize.yaml
+
+# Enables the frontend
+frontend:
+
+lovelace:
+  mode: yaml
+
+# Enables configuration UI
+config:
+
+zwave:
+  usb_path: /dev/ttyACM0
+
+http:
+  ip_ban_enabled: False
+  login_attempts_threshold: 3
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 192.168.0.202
+    - 37.24.225.83
+  base_url: !secret domain
+
+updater:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# KNX
+knx:
+  tunneling:
+       host: '192.168.0.100'
+       port: 3671
+       local_ip: '192.168.0.202'
+
+# Enables a map showing the location of tracked devices
+map:
+
+#logger:
+  #default: info
+  #  logs:
+  #  xknx: debug
+
+# Delete historic data after 365 days
+recorder:
+  purge_keep_days: 1500
+
+# Track the sun
+sun:
+
+weather:
+- platform: darksky
+  api_key: !secret dark_sky_api_password
+  name: !secret home_name
+  mode: daily
+
+notify:
+- platform: pushbullet
+  name: pushbullet_mwi
+  api_key: !secret pushbullet_api
+
+- platform: pushbullet
+  name: pushbullet_kalo
+  api_key: !secret kalo_pushbullet_api
+
+- platform: group
+  name: notifiers
+  services:
+      - service: pushbullet_mwi
+      - service: pushbullet_kalo
+
+wake_on_lan:
+webostv:
+    host: !secret living_room_tv
+    name: livingroom_tv
+    standby_connection: true
+    turn_on_action:
+      service: wake_on_lan.send_magic_packet
+      data:
+        mac: "A8:23:FE:5B:FD:F1"
+
+media_player: !include media_player.yaml
+
+binary_sensor: !include binary_sensor.yaml
+switch: !include knx_switch.yaml
+sensor: !include sensor.yaml
+climate: !include climate.yaml
+cover: !include cover.yaml
+light: !include light.yaml
+group: !include groups.yaml
+zone: !include zones.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml

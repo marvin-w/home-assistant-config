@@ -1,0 +1,194 @@
+  # Lights
+  light.schlafzimmer:
+    friendly_name: Schlafzimmer
+    icon: mdi:lightbulb
+
+  light.gaestezimmer:
+    friendly_name: Gästezimmer
+    icon: mdi:lightbulb
+
+  light.flur:
+    friendly_name: Flur
+    icon: mdi:lightbulb
+
+  light.balkon1:
+    friendly_name: Balkon1
+    icon: mdi:lightbulb
+
+  light.bad:
+    friendly_name: Bad
+    icon: mdi:lightbulb
+
+  light.kueche:
+    friendly_name: Küche
+    icon: mdi:lightbulb
+
+  light.bad_spiegel:
+    friendly_name: Bad Spiegel
+    icon: mdi:lamp
+
+  light.kueche_leiste:
+    friendly_name: Lichterkette Wohnzimmer
+    icon: mdi:vector-line
+
+  light.wohnzimmer_wand:
+    friendly_name: Wandleuchte
+    icon: mdi:lightbulb
+
+  light.wohnzimmer_schraege:
+    friendly_name: Licht Fernseher
+    icon: mdi:lightbulb
+
+  light.wohnzimmer_leiste:
+    friendly_name: Lichtleiste Wohnzimmer
+    icon: mdi:lightbulb
+
+  light.wohnzimmer_sternenhimmel:
+    friendly_name: Sternenhimmel
+    icon: mdi:weather-night
+
+  light.esszimmer:
+    friendly_name: Esszimmer
+    icon: mdi:ceiling-light
+
+  light.wc:
+    friendly_name: WC
+    icon: mdi:lightbulb
+
+  light.buero1:
+    friendly_name: Büro 1
+    icon: mdi:lightbulb
+
+  light.buero2:
+    friendly_name: Büro 2
+    icon: mdi:lightbulb
+
+  light.buero3:
+    friendly_name: Büro 3
+    icon: mdi:lightbulb
+
+  light.buero:
+    friendly_name: Büro
+    icon: mdi:lightbulb
+
+  light.abstellraum:
+    friendly_name: Abstellraum
+    icon: mdi:lightbulb
+
+  # Device Tracker
+  device_tracker.marvin_wichmann_handy:
+    friendly_name: Marvin Wichmann
+
+  # Covers
+  cover.schlafzimmer:
+    friendly_name: Schlafzimmer
+
+  cover.gast:
+    friendly_name: Gast
+
+  cover.kueche:
+    friendly_name: Küche Balkon
+
+  cover.wohnen_fenster:
+    friendly_name: Wohnzimmer Rolladen Fenster
+
+  cover.wohnen_balkon:
+    friendly_name: Wohnzimmer Balkon Rolladen
+
+  cover.dach_bad:
+    friendly_name: Dachfenster Bad
+
+  cover.dach_wc:
+    friendly_name: Dachfenster WC
+
+  cover.covers:
+    friendly_name: Alle Rolläden
+
+  cover.garage:
+    friendly_name: Garagentor
+
+  # Switches
+  switch.kueche_abzug:
+    friendly_name: Abzugshaube
+    icon: mdi:pinwheel
+
+  switch.wohnzimmer_stereoanlage:
+    friendly_name: Stereoanlage
+    icon: mdi:music
+
+  switch.schlafzimmer_steckdose_marvin:
+    friendly_name: Steckdose Marvin
+    icon: mdi:power-plug
+
+  switch.schlafzimmer_wand_strom:
+    friendly_name: Freischaltung Strom Wand
+    icon: mdi:power-plug
+
+  switch.ac:
+    friendly_name: Lüftung
+    icon: mdi:air-conditioner
+
+  switch.balkon2_steckdose:
+    friendly_name: Steckdose Balkon 2
+    icon: mdi:power-plug
+
+  switch.buero_steckdose:
+    friendly_name: Steckdose Büro
+    icon: mdi:power-plug
+
+  switch.flur_sperrfunktion:
+    friendly_name: Flur Bewegungsmelder
+    icon: mdi:motion-sensor
+
+  # Media player
+  media_player.livingroom_tv:
+    friendly_name: Fernseher Wohnzimmer
+    icon: mdi:television
+
+  media_player.receiver:
+    friendly_name: Stereoanlage
+
+  media_player.receiver_zone_2:
+    friendly_name: Stereoanlage Bad
+
+  media_player.spotify:
+    friendly_name: Spotify
+
+  # Climate
+  climate.schlaf:
+    friendly_name: Schlafzimmer
+
+  climate.bad:
+    friendly_name: Bad
+
+  climate.wohn:
+    friendly_name: Wohn & Esszimmer
+
+  climate.kueche:
+    friendly_name: Küche
+
+  climate.buero:
+    friendly_name: Büro
+
+  climate.gast:
+    friendly_name: Gästezimmer
+
+  climate.abstell:
+    friendly_name: Abstellraum
+
+  # Groups
+  group.all_lights:
+    friendly_name: Alle Lichter
+
+  group.all_switches:
+    friendly_name: Alle Schalter
+
+  # Sensors
+  sensor.trash_appointment:
+    friendly_name: Nächste Müllleerung
+    icon: mdi:delete-empty
+
+  sensor.trash_appointment_days:
+    friendly_name: Tage bis zur nächsten Leerung
+    icon: mdi:delete-empty
+
