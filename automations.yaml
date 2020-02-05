@@ -14,25 +14,36 @@
 
   - alias: 'Get notified when garage door opens'
     trigger:
-      platform: state
-      entity_id: sensor.garage_door_status
-      to: 'open'
+      platform: template
+      value_template: "{% if states.sensor.garage_door_status.state | string == 'open' %}true{% endif %}"
     action:
-      - service: notify.notifiers
+      - service: notify.pushbullet_mwi
         data:
           title: Warnung
           message: Deine Garage ist offen
 
   - alias: 'Get notified when garage door closes'
     trigger:
-      platform: state
-      entity_id: sensor.garage_door_status
-      to: 'closed'
+      platform: template
+      value_template: "{% if states.sensor.garage_door_status.state | string == 'closed' %}true{% endif %}"
     action:
-      - service: notify.notifiers
+      - service: notify.pushbullet_mwi
         data:
           title: Info
           message: Deine Garage ist jetzt geschlossen
+
+  - alias: 'Close garage if it has been opened for longer than 7 minutes'
+    initial_state: True
+    trigger:
+      platform: template
+      value_template: "{% if (states.sensor.garage_door_time_in_state.state | string == '7m') and (states.sensor.garage_door_status.state | string == 'open') %}true{% endif %}"
+    action:
+      - service: cover.close_cover
+        entity_id: cover.garage
+      - service: notify.pushbullet_mwi
+        data:
+          title: Warnung
+          message: Deine Garage war länger als 7 Minuten offen und wurde daher automatisch geschlossen.
 
   - alias: 'Next trash appointment notification'
     initial_state: True

@@ -24,6 +24,7 @@
       - type: disk_use_percent
         arg: /
 
+  # Rest sensors from microservices
   - platform: rest
     resource: https://trash-service.marvin-wichmann.de/trash
     name: trash_appointment
