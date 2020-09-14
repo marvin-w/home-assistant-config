@@ -1,0 +1,10 @@
+---
+    alias: 'Get notified when garage door closes'
+    trigger:
+      platform: template
+      value_template: "{% if states.sensor.garage_door_status.state | string == 'closed' %}true{% endif %}"
+    action:
+      - service: notify.notifiers
+        data:
+          title: Info
+          message: Deine Garage ist jetzt geschlossen

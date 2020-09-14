@@ -1,0 +1,11 @@
+---
+    alias: 'Take pill reminder'
+    initial_state: True
+    trigger:
+      - platform: template
+        value_template: "{% if states.sensor.pill_reminder.state | int < 1 %}true{% endif %}"
+    action:
+      service: notify.pushbullet_kalo
+      data_template:
+        title: "Pille!"
+        message: "Pille nehmen :-P."

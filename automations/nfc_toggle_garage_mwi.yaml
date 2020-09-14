@@ -1,0 +1,12 @@
+---
+    alias: 'Read NFC: Toggle garage state - MWI'
+    initial_state: True
+    trigger:
+      platform: event
+      event_type: tag_scanned
+      event_data:
+        device_id: 264d967e880f7b0e
+        tag_id: f9b90700-0aff-4bf9-b6f5-edbd38760b22
+    action:
+      - service: cover.toggle
+        entity_id: cover.garage

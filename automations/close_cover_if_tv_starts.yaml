@@ -1,0 +1,27 @@
+---    
+    alias: 'Lower covers if TV starts when sun is still shining'
+    initial_state: True
+    trigger:
+      - platform: template
+        value_template: "{% if states.media_player.livingroom_tv.state | string == 'on' %}true{% endif %}"
+    condition:
+      - condition: state
+        entity_id: 'sun.sun'
+        state: 'above_horizon'
+    action:
+      - service: cover.set_cover_position
+        data:
+          entity_id: cover.wohnen_esszimmer
+          position: 65
+      - service: cover.set_cover_position
+        data:
+          entity_id: cover.kueche
+          position: 65
+      - service: cover.set_cover_position
+        data:
+          entity_id: cover.wohnen_tv
+          position: 65
+      - service: cover.set_cover_position
+        data:
+          entity_id: cover.wohnen_balkon
+          position: 65

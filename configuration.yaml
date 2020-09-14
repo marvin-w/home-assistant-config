@@ -36,13 +36,13 @@ history:
 
 # KNX
 knx:
- light: !include knx_light.yaml
- cover: !include knx_cover.yaml
- binary_sensor: !include knx_binary_sensor.yaml
- weather: !include knx_weather.yaml
- climate: !include knx_climate.yaml
- sensor: !include knx_sensor.yaml
- switch: !include knx_switch.yaml
+ light: !include integrations/knx/light.yaml
+ cover: !include integrations/knx/cover.yaml
+ binary_sensor: !include integrations/knx/binary_sensor.yaml
+ weather: !include integrations/knx/weather.yaml
+ climate: !include integrations/knx/climate.yaml
+ sensor: !include integrations/knx/sensor.yaml
+ switch: !include integrations/knx/switch.yaml
 
 
 # Enables a map showing the location of tracked devices
@@ -55,7 +55,7 @@ map:
 
 # Delete historic data after 365 days
 recorder:
-  db_url: !env_var DB_CONNECTION
+  #db_url: !env_var DB_CONNECTION
   purge_keep_days: 1500
 
 # Track the sun
@@ -78,6 +78,7 @@ weather:
   mode: daily
 
 notify:
+  # todo: replace with android app
 - platform: pushbullet
   name: pushbullet_mwi
   api_key: !secret pushbullet_api
@@ -116,5 +117,5 @@ light: !include light.yaml
 group: !include groups.yaml
 vacuum: !include vacuum.yml
 zone: !include zones.yaml
-automation: !include automations.yaml
+automation: !include_dir_list automations/
 script: !include scripts.yaml

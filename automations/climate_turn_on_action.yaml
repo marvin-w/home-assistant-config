@@ -1,0 +1,19 @@
+---
+    alias: 'Correct settings when turning on climate'
+    initial_state: True
+    trigger: 
+      - platform: template
+        value_template: "{% if states.switch.climate.state | string == 'on' %}true{% endif %}"
+    action:
+      - service: mqtt.publish
+        data:
+          topic: cmnd/tasmota/infrarot/irsend
+          payload: '{"Protocol":"NEC_LIKE","Bits":32,"Data":"0x12488100","DataLSB":"0x48128100"}'
+      - service: mqtt.publish
+        data:
+          topic: cmnd/tasmota/infrarot/irsend
+          payload: '{"Protocol":"NEC_LIKE","Bits":32,"Data":"0x12188100","DataLSB":"0x48188100","Repeat":0}'
+      - service: mqtt.publish
+        data:
+          topic: cmnd/tasmota/infrarot/irsend
+          payload: '{"Protocol":"NEC_LIKE","Bits":32,"Data":"0x12188300","DataLSB":"0x4818C100","Repeat":0}'

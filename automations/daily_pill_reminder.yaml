@@ -1,0 +1,11 @@
+---
+alias: 'Take daily reminder'
+initial_state: True
+trigger:
+  - platform: template
+    value_template: "{% if states.sensor.daily_reminder.state | int < 1 %}true{% endif %}"
+action:
+  service: notify.pushbullet_mwi
+  data_template:
+    title: "Tablette nehmen"
+    message: "Tablette nehmen!"

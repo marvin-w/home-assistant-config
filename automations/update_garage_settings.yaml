@@ -1,0 +1,10 @@
+---
+    alias: 'Update garage settings'
+    trigger:
+      platform: time_pattern
+      seconds: /59
+    action:
+      service: mqtt.publish
+      data:
+        topic: "garadget/garage/command"
+        payload: "get-status"
