@@ -1,0 +1,4 @@
+night_mode:
+  name: Nachtszene aktivieren
+  initial: False
+  icon: mdi:clear-night

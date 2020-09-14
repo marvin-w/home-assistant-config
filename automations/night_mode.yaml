@@ -1,0 +1,16 @@
+---
+alias: 'Activates night mode'
+initial_state: True
+trigger:
+  platform: state
+  entity_id: input_boolean.night_mode
+  to: 'on'
+  for:
+    minutes: 1
+action:
+  - service: switch.turn_off
+    entity_id: switch.zentral
+  - service: switch.turn_on
+    entity_id:
+      - switch.schlafzimmer_steckdose_marvin
+      - switch.schlafzimmer_wand_strom

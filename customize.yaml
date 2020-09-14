@@ -15,6 +15,10 @@
     friendly_name: Balkon1
     icon: mdi:lightbulb
 
+  light.balkon2:
+    friendly_name: Balkon
+    icon: mdi:lightbulb
+
   light.bad:
     friendly_name: Bad
     icon: mdi:lightbulb
