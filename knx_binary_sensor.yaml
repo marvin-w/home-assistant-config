@@ -1,5 +1,4 @@
-  - platform: knx
-    name: spotify_automation
+  - name: spotify_automation
     state_address: '6/0/0'
     automation:
       - counter: 1
@@ -19,3 +18,16 @@
         action:
           - entity_id: media_player.spotify
             service: media_player.media_pause
+  - state_address: "2/0/33"
+    automation:
+      - counter: 1
+        hook: 'on'
+        action:
+          - entity_id: cover.sonne_abstellkammer
+            service: cover.open_cover
+      - counter: 1
+        hook: 'off'
+        action:
+          - entity_id: cover.sonne_abstellkammer
+            service: cover.close_cover
+

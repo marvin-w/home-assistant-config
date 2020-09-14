@@ -1,96 +1,3 @@
-    - platform: knx
-      name: schlafzimmer
-      address: '1/0/0'
-      brightness_address: '1/0/13'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: gaestezimmer
-      address: '1/0/6'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: flur
-      address: '1/0/9'
-      brightness_address: '1/0/42'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: balkon1
-      address: '1/0/7'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: bad
-      address: '1/0/14'
-      brightness_address: '1/0/41'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: bad.spiegel
-      address: '1/0/16'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: kueche
-      address: '1/0/19'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: kueche.leiste
-      address: '1/0/17'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: wohnzimmer.wand
-      address: '1/0/26'
-      brightness_address: '1/0/13'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: wohnzimmer.schraege
-      address: '1/0/22'
-      brightness_address: '1/0/40'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: wohnzimmer.leiste
-      address: '1/0/20'
-      brightness_address: '1/0/21'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: wohnzimmer.sternenhimmel
-      address: '1/0/37'
-      brightness_address: '1/0/39'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: esszimmer
-      address: '1/0/24'
-      brightness_address: '1/0/43'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: wc
-      address: '1/0/31'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: buero1
-      address: '1/0/32'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: buero2
-      address: '1/0/34'
-      state_address: '5/0/2'
-
-    - platform: knx
-      name: buero3
-      address: '1/0/35'
-      state_address: '5/0/2'
-
     - platform: group
       name: buero
       entities:
@@ -98,7 +5,30 @@
         - light.buero2
         - light.buero3
 
-    - platform: knx
-      name: abstellraum
-      address: '1/0/36'
-      state_address: '5/0/2'
+    - platform: group
+      name: bad_all
+      entities:
+        - light.bad
+        - light.bad_spiegel
+
+    - platform: group
+      name: esszimmer_all
+      entities:
+        - light.esszimmer
+        - light.wohnzimmer_wand
+        - light.kueche_leiste
+
+    - platform: group
+      name: kueche_all
+      entities:
+        - light.kueche
+        - light.kueche_leiste
+
+    - platform: group
+      name: wohnzimmer_all
+      entities:
+        - light.wohnzimmer_schraege
+        - light.wohnzimmer_wand
+        - light.kueche_leiste
+        - light.wohnzimmer_sternenhimmel
+

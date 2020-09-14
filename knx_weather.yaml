@@ -1,0 +1,10 @@
+  - name: home
+    address_temperature: "7/0/1"
+    address_brightness_south: "7/0/5"
+    address_brightness_west: "7/0/3"
+    address_brightness_east: "7/0/4"
+    address_wind_speed: "7/0/2"
+    address_rain_alarm: "7/0/0"
+    address_day_night: "7/0/7"
+    expose_sensors: True
+    sync_state: True

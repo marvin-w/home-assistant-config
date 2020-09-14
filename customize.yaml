@@ -89,11 +89,14 @@
   cover.kueche:
     friendly_name: Küche Balkon
 
-  cover.wohnen_fenster:
-    friendly_name: Wohnzimmer Rolladen Fenster
+  cover.wohnen_esszimmer:
+    friendly_name: Esstisch Rolladen
+
+  cover.wohnen_tv:
+    friendly_name: TV Rolladen
 
   cover.wohnen_balkon:
-    friendly_name: Wohnzimmer Balkon Rolladen
+    friendly_name: Balkon Rolladen
 
   cover.dach_bad:
     friendly_name: Dachfenster Bad
@@ -126,6 +129,10 @@
 
   switch.ac:
     friendly_name: Lüftung
+    icon: mdi:air-conditioner
+
+  switch.climate:
+    friendly_name: Klimaanlage
     icon: mdi:air-conditioner
 
   switch.balkon2_steckdose:
@@ -188,7 +195,36 @@
     friendly_name: Nächste Müllleerung
     icon: mdi:delete-empty
 
+  sensor.garage_door_time_in_state:
+    friendly_name: 'seit'
+    icon: mdi:clock-outline
+
   sensor.trash_appointment_days:
     friendly_name: Tage bis zur nächsten Leerung
     icon: mdi:delete-empty
+
+  sensor.abstell_window_access_control:
+    friendly_name: Abstellkammer Fenster
+
+  sensor.abstell_window_battery_level:
+    friendly_name: Abstellkammer Fenster Batterie
+
+  sensor.home_brightness_south:
+    friendly_name: Helligkeit Süden
+
+  sensor.home_brightness_west:
+    friendly_name: Helligkeit Westen
+
+  sensor.home_brightness_east:
+    friendly_name: Helligkeit Osten
+
+  sensor.home_temperature:
+    friendly_name: Außentemperatur
+
+  sensor.home_wind_speed:
+    friendly_name: Windgeschwindigkeit
+
+  sensor.home_rain_alarm:
+    friendly_name: Regenalarm
+    mdi:icon: mdi:rainy
 

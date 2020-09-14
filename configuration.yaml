@@ -11,7 +11,6 @@ homeassistant:
 frontend:
 
 lovelace:
-  mode: yaml
 
 # Enables configuration UI
 config:
@@ -26,7 +25,6 @@ http:
   trusted_proxies:
     - 192.168.0.202
     - 37.24.225.83
-  base_url: !secret domain
 
 updater:
 
@@ -38,10 +36,14 @@ history:
 
 # KNX
 knx:
-  tunneling:
-       host: '192.168.0.100'
-       port: 3671
-       local_ip: '192.168.0.202'
+ light: !include knx_light.yaml
+ cover: !include knx_cover.yaml
+ binary_sensor: !include knx_binary_sensor.yaml
+ weather: !include knx_weather.yaml
+ climate: !include knx_climate.yaml
+ sensor: !include knx_sensor.yaml
+ switch: !include knx_switch.yaml
+
 
 # Enables a map showing the location of tracked devices
 map:
@@ -53,10 +55,21 @@ map:
 
 # Delete historic data after 365 days
 recorder:
+  db_url: !env_var DB_CONNECTION
   purge_keep_days: 1500
 
 # Track the sun
 sun:
+
+
+mobile_app:
+
+mqtt:
+  broker: 192.168.0.203
+  port: 1883
+  client_id: 'Homeassistant'
+  username: svc_user
+  password: !secret mqtt_password
 
 weather:
 - platform: darksky
@@ -83,21 +96,25 @@ wake_on_lan:
 webostv:
     host: !secret living_room_tv
     name: livingroom_tv
-    standby_connection: true
     turn_on_action:
       service: wake_on_lan.send_magic_packet
       data:
         mac: "A8:23:FE:5B:FD:F1"
 
+spotify:
+    client_id: !secret spotify_client_id
+    client_secret: !secret spotify_secret_id
+
 media_player: !include media_player.yaml
 
-binary_sensor: !include binary_sensor.yaml
-switch: !include knx_switch.yaml
+
+switch: !include switch.yaml
+camera: !include camera.yml
 sensor: !include sensor.yaml
-climate: !include climate.yaml
 cover: !include cover.yaml
 light: !include light.yaml
 group: !include groups.yaml
+vacuum: !include vacuum.yml
 zone: !include zones.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml

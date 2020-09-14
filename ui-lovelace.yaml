@@ -22,6 +22,11 @@ views:
             - sensor.garage_door_status
             - sensor.garage_door_time_in_state
             - sensor.garage_door_wifi_signal_strength
+      - id: garadge_camera
+        title: Garage Kamera
+        type: picture-entity
+        camera_view: live
+        entity: camera.garage
       - id: weather
         title: Wetter
         type: weather-forecast
@@ -34,8 +39,9 @@ views:
           title: Funktionen
           type: entities
           entities:
-              - cover.wohnen_fenster
+              - cover.wohnen_tv
               - cover.wohnen_balkon
+              - cover.wohnen_esszimmer
               - light.kueche_leiste
               - media_player.livingroom_tv
               - media_player.receiver
@@ -160,6 +166,12 @@ views:
     icon: ''
     badhes: []
     cards:
+        - id: windowsensor
+          title: Fensersensor
+          type: entities
+          entities:
+            - sensor.abstell_window_access_control
+            - sensor.abstell_window_battery_level
         - id: synology
           title: Synology NAS
           type: entities

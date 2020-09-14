@@ -1,66 +1,18 @@
-  - platform: knx
-    name: "Schlafzimmer"
-    move_long_address: '2/0/0'
-    move_short_address: '2/0/1'
-    travelling_time_down: 51
-    travelling_time_up: 61
-
-  - platform: knx
-    name: "Gast"
-    move_long_address: '2/0/2'
-    move_short_address: '2/0/3'
-    travelling_time_down: 51
-    travelling_time_up: 61
-
-  - platform: knx
-    name: "Kueche"
-    move_long_address: '2/0/6'
-    move_short_address: '2/0/7'
-    travelling_time_down: 51
-    travelling_time_up: 61
-
-  - platform: knx
-    name: "Wohnen.Fenster"
-    move_long_address: '2/0/10'
-    move_short_address: '2/0/11'
-    travelling_time_down: 51
-    travelling_time_up: 61
-
-  - platform: knx
-    name: "Wohnen.Balkon"
-    move_long_address: '2/0/12'
-    move_short_address: '2/0/13'
-    travelling_time_down: 51
-    travelling_time_up: 61
 
   - platform: group
     name: "covers"
     entities:
+      - cover.wohnenesszimmer
       - cover.wohnenbalkon
-      - cover.wohnenfenster
+      - cover.wohnentv
       - cover.kueche
       - cover.gast
       - cover.schlafzimmer
 
-  # Dachfenster
-  - platform: knx
-    name: "Dach.Bad"
-    move_long_address: '2/0/4'
-    move_short_address: '2/0/5'
-    travelling_time_down: 31
-    travelling_time_up: 41
-
-  - platform: knx
-    name: "Dach.WC"
-    move_long_address: '2/0/14'
-    move_short_address: '2/0/15'
-    travelling_time_down: 31
-    travelling_time_up: 41
-
-  - platform: garadget
-    covers:
-      garage:
-        device: 220025000747373034353237
-        username: !secret GARADGET_USERNAME
-        password: !secret GARADGET_PASSWORD
-        name: "garage"
+  - platform: mqtt
+    name: garage
+    command_topic: "garadget/garage/command"
+    state_topic: "garadget/garage/status"
+    payload_open: "open"
+    payload_close: "close"
+    value_template: "{{ value_json.status }}"

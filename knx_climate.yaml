@@ -1,5 +1,4 @@
-  - platform: knx
-    name: schlaf
+  - name: schlaf
     operation_mode_frost_protection_address: '3/1/0'
     temperature_address: '3/1/1'
     operation_mode_comfort_address: '3/1/2'
@@ -10,8 +9,7 @@
     min_temp: 7.0
     max_temp: 35.0
 
-  - platform: knx
-    name: bad
+  - name: bad
     operation_mode_frost_protection_address: '3/1/12'
     temperature_address: '3/1/13'
     operation_mode_comfort_address: '3/1/14'
@@ -22,8 +20,7 @@
     min_temp: 7.0
     max_temp: 35.0
 
-  - platform: knx
-    name: kueche
+  - name: kueche
     operation_mode_frost_protection_address: '3/1/18'
     temperature_address: '3/1/19'
     operation_mode_comfort_address: '3/1/20'
@@ -34,8 +31,7 @@
     min_temp: 7.0
     max_temp: 35.0
 
-  - platform: knx
-    name: wohn
+  - name: wohn
     operation_mode_frost_protection_address: '3/1/24'
     temperature_address: '3/1/25'
     operation_mode_comfort_address: '3/1/26'
@@ -46,8 +42,7 @@
     min_temp: 7.0
     max_temp: 35.0
 
-  - platform: knx
-    name: buero
+  - name: buero
     operation_mode_frost_protection_address: '3/1/30'
     temperature_address: '3/1/31'
     operation_mode_comfort_address: '3/1/32'
@@ -58,8 +53,7 @@
     min_temp: 7.0
     max_temp: 35.0
 
-  - platform: knx
-    name: gast
+  - name: gast
     operation_mode_frost_protection_address: '3/1/36'
     temperature_address: '3/1/37'
     operation_mode_comfort_address: '3/1/38'
@@ -70,8 +64,7 @@
     min_temp: 7.0
     max_temp: 35.0
 
-  - platform: knx
-    name: abstell
+  - name: abstell
     operation_mode_frost_protection_address: '3/1/42'
     temperature_address: '3/1/43'
     operation_mode_comfort_address: '3/1/44'

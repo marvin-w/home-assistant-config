@@ -1,0 +1,67 @@
+  - name: "Schlafzimmer"
+    move_long_address: '2/0/0'
+    move_short_address: '2/0/1'
+    position_address: '2/0/29'
+    position_state_address: '2/0/22'
+    travelling_time_down: 32
+    travelling_time_up: 32
+
+  - name: "Gast"
+    move_long_address: '2/0/2'
+    move_short_address: '2/0/3'
+    position_address: '2/0/16'
+    position_state_address: '2/0/17'
+    travelling_time_down: 32
+    travelling_time_up: 32
+
+  - name: "Kueche"
+    move_long_address: '2/0/6'
+    move_short_address: '2/0/7'
+    position_address: '2/0/28'
+    position_state_address: '2/0/21'
+    travelling_time_down: 32
+    travelling_time_up: 32
+
+  - name: "Wohnen.Esszimmer"
+    move_long_address: '2/0/10'
+    move_short_address: '2/0/11'
+    position_address: '2/0/26'
+    position_state_address: '2/0/19'
+    travelling_time_down: 32
+    travelling_time_up: 32
+
+  - name: "Wohnen.TV"
+    move_long_address: '2/0/8'
+    move_short_address: '2/0/9'
+    position_address: '2/0/25'
+    position_state_address: '2/0/18'
+    travelling_time_down: 32
+    travelling_time_up: 32
+
+  - name: "Wohnen.Balkon"
+    move_long_address: '2/0/12'
+    move_short_address: '2/0/13'
+    position_address: '2/0/27'
+    position_state_address: '2/0/20'
+    travelling_time_down: 32
+    travelling_time_up: 32
+
+  - name: "Sonne.Abstellkammer"
+    move_long_address: "2/0/32"
+    move_short_address: "2/0/31"
+
+  # Dachfenster
+  - name: "Dach.Bad"
+    move_long_address: '2/0/4'
+    move_short_address: '2/0/5'
+    position_state_address: '2/0/23'
+    travelling_time_down: 31
+    travelling_time_up: 41
+
+  - name: "Dach.WC"
+    move_long_address: '2/0/14'
+    move_short_address: '2/0/15'
+    position_state_address: '2/0/24'
+    travelling_time_down: 31
+    travelling_time_up: 41
+
