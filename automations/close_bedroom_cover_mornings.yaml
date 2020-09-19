@@ -1,0 +1,16 @@
+---
+alias: 'Closed bedroom cover when the sun goes up in the morning and we are at home'
+initial_state: True
+trigger:
+  platform: sun
+  event: sunrise
+  offset: "+00:45"
+condition:
+  - condition: state
+    entity_id: 'binary_sensor.marvin_is_charging'
+    state: 'on'
+action:
+  - service: cover.set_cover_position
+    data:
+      entity_id: cover.schlafzimmer
+      position: 75
