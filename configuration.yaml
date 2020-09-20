@@ -63,6 +63,10 @@ recorder:
 # Track the sun
 sun:
 
+octoprint:
+  host: !secret octoprint_host
+  api_key: !secret octoprint_api
+
 
 mobile_app:
 
