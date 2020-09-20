@@ -5,7 +5,7 @@ trigger:
   platform: event
   event_type: tag_scanned
   event_data:
-    device_id: 264d967e880f7b0e
+    device_id: 40c2d6dd5898874e
     tag_id: 471abf8c-f692-4c59-8b83-a850bdd57188
 action:
   - service: cover.toggle
