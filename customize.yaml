@@ -230,9 +230,9 @@
 
   binary_sensor.home_rain_alarm:
     friendly_name: Regenalarm
-    mdi:icon: mdi:rainy
+    icon: mdi:rainy
 
   switch.main_door:
     friendly_name: Haustüre
-    mdi:icon: mdi:door
+    icon: mdi:door
 

@@ -3,7 +3,7 @@ alias: 'Switch main door to off when used - off triggers the connector and sends
 initial_state: True
 trigger:
   platform: state
-  entity_id: switch.turn_on
+  entity_id: switch.main_door
   to: 'on'
 action:
   - service: switch.turn_off
