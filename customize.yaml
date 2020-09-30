@@ -234,5 +234,5 @@
 
   switch.main_door:
     friendly_name: Haustüre
-    mdi:icon: mdi:door-open
+    mdi:icon: mdi:door
 

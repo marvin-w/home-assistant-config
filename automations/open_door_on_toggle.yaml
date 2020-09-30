@@ -1,0 +1,11 @@
+---
+alias: 'Switch main door to off when used - off triggers the connector and sends the signal to the basement'
+initial_state: True
+trigger:
+  platform: state
+  entity_id: switch.turn_on
+  to: 'on'
+action:
+  - service: switch.turn_off
+    entity_id:
+      - switch.main_door
