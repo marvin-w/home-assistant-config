@@ -57,7 +57,7 @@ map:
 
 # Delete historic data after 365 days
 recorder:
-        # db_url: !env_var DB_CONNECTION
+  db_url: !env_var DB_CONNECTION
   purge_keep_days: 1500
 
 # Track the sun
