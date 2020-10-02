@@ -1,0 +1,30 @@
+---
+name: Generate Readme
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 */6 * * *'
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2.3.3
+
+      - name: Build README
+        run: .documentation/readme_generator.sh .
+
+      - name: Check for changes
+        run: |
+          git diff --quiet || echo "No changes to commit"
+
+      - name: Commit changes if required
+        if: ${{ success() }}
+        run: |
+          git config --global user.email "readme@marvin-wichmann.de"
+          git config --global user.name "Readme Bot"
+          git add README.md
+          git commit -m 'documentation: Update README' || exit 0
+          git push
