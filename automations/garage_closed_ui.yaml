@@ -1,9 +1,9 @@
 ---
-alias: 'Get notified when garage door closes'
+alias: 'Get notified when garage door closes - automatic interaction from HA - intermediate closing state'
 trigger:
   platform: state
   entity_id: cover.garage
-  from: "open"
+  from: "closing"
   to: "closed"
 action:
   - service: notify.notifiers

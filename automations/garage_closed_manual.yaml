@@ -1,0 +1,12 @@
+---
+alias: 'Get notified when garage door closes - manual interaction - eg. remote'
+trigger:
+  platform: state
+  entity_id: cover.garage
+  from: "open"
+  to: "closed"
+action:
+  - service: notify.notifiers
+    data:
+      title: Info
+      message: Deine Garage ist jetzt geschlossen
