@@ -12,6 +12,11 @@
 	</p>
 </p>
 
+## Hardware
+
+My Home Assistant runs on a single node Kubernetes cluster within my rack at home. I decided to go for this approach simply because I love how easy it is to configure new deployments and how great the
+scheduler of kubernetes works.
+
 ## Why do we automate?
 
 Automations in our house are there to help us reduce the number of repetitive tasks so we can focus on more important things.
