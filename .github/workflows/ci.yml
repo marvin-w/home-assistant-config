@@ -43,6 +43,8 @@ jobs:
         uses: "docker://homeassistant/home-assistant:stable"
         with:
           args: python -m homeassistant --config . --script check_config --info all
+        env:
+          - DB_CONNECTION: user:pw@192.168.0.1/db
   home_assistant_beta:
       needs: pre-commit
       runs-on: ubuntu-latest
@@ -61,3 +63,5 @@ jobs:
           uses: "docker://homeassistant/home-assistant:beta"
           with:
             args: python -m homeassistant --config ./ --script check_config --info all
+          env:
+            - DB_CONNECTION: user:pw@192.168.0.1/db
