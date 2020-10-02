@@ -33,4 +33,3 @@
 
   - name: "Main.Door" # DIY
     address: '8/0/0' # only UP supported - resets after 3 seconds
-

@@ -1,58 +1,58 @@
-  # Weather
-  - platform: darksky
-    api_key: !secret dark_sky_api_password
-    language: 'de'
-    forecast:
-      - 0
-    monitored_conditions:
-      - summary
-      - temperature
-      - hourly_summary
-      - temperature_high
-      - wind_speed
-      - humidity
-      - pressure
-      - temperature_low
-      - precip_intensity
-      - icon
+---
+# Weather
+- platform: darksky
+  api_key: !secret dark_sky_api_password
+  language: 'de'
+  forecast:
+    - 0
+  monitored_conditions:
+    - summary
+    - temperature
+    - hourly_summary
+    - temperature_high
+    - wind_speed
+    - humidity
+    - pressure
+    - temperature_low
+    - precip_intensity
+    - icon
 
-  # HA stats
-  - platform: systemmonitor
-    resources:
-      - type: memory_use_percent
-      - type: processor_use
-      - type: disk_use_percent
-        arg: /
+# HA stats
+- platform: systemmonitor
+  resources:
+    - type: memory_use_percent
+    - type: processor_use
+    - type: disk_use_percent
+      arg: /
 
-  # Rest sensors from microservices
-  - platform: rest
-    resource: https://trash-service.marvin-wichmann.de/trash
-    name: trash_appointment
-    value_template: '{{ value_json.name }}'
+# Rest sensors from microservices
+- platform: rest
+  resource: https://trash-service.marvin-wichmann.de/trash
+  name: trash_appointment
+  value_template: '{{ value_json.name }}'
 
-  - platform: rest
-    resource: https://reminder-service.marvin-wichmann.de/reminders/pill
-    name: pill_reminder
-    value_template: '{{ value_json.hoursLeft }}'
+- platform: rest
+  resource: https://reminder-service.marvin-wichmann.de/reminders/pill
+  name: pill_reminder
+  value_template: '{{ value_json.hoursLeft }}'
 
-  - platform: rest
-    resource: https://reminder-service.marvin-wichmann.de/reminders/daily
-    name: daily_reminder
-    value_template: '{{ value_json.hoursLeft }}'
+- platform: rest
+  resource: https://reminder-service.marvin-wichmann.de/reminders/daily
+  name: daily_reminder
+  value_template: '{{ value_json.hoursLeft }}'
 
-  - platform: rest
-    resource: https://trash-service.marvin-wichmann.de/trash/days
-    name: trash_appointment_days
+- platform: rest
+  resource: https://trash-service.marvin-wichmann.de/trash/days
+  name: trash_appointment_days
 
-  - platform: mqtt
-    name: garage_door_time_in_state
-    state_topic: 'garadget/garage/status'
-    value_template: '{{ value_json.time }}'
+- platform: mqtt
+  name: garage_door_time_in_state
+  state_topic: 'garadget/garage/status'
+  value_template: '{{ value_json.time }}'
 
-
-  - platform: template
-    sensors:
-        garage_door_status:
-            friendly_name: 'Torstatus'
-            value_template: '{{ states.cover.garage.state }}'
-            icon_template: '{% if is_state("cover.garage", "closed") %}mdi:garage{% else %}mdi:garage-open{% endif %}'
+- platform: template
+  sensors:
+    garage_door_status:
+      friendly_name: 'Torstatus'
+      value_template: '{{ states.cover.garage.state }}'
+      icon_template: '{% if is_state("cover.garage", "closed") %}mdi:garage{% else %}mdi:garage-open{% endif %}'

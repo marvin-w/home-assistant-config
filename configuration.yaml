@@ -24,9 +24,6 @@ http:
   ip_ban_enabled: True
   login_attempts_threshold: 3
   use_x_forwarded_for: true
-  trusted_proxies:
-    - 192.168.0.202
-    - 37.24.225.83
 
 updater:
 

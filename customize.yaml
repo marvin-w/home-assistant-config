@@ -235,4 +235,3 @@
   switch.main_door:
     friendly_name: Haustüre
     icon: mdi:door
-

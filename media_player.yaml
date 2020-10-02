@@ -1,8 +1,8 @@
-  - platform: onkyo
-    host: !secret onkyo_host
-    name: receiver
-    max_volume: 80
-    sources:
-      tv: 'TV'
-      network: 'Network'
-
+---
+- platform: onkyo
+  host: !secret onkyo_host
+  name: receiver
+  max_volume: 80
+  sources:
+    tv: 'TV'
+    network: 'Network'

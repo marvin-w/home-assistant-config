@@ -1,4 +1,4 @@
----    
+---
     alias: 'Lower covers if TV starts when sun is still shining'
     initial_state: True
     trigger:

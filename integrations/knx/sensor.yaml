@@ -42,4 +42,3 @@
   - name: Stellventil.Schlafzimmer
     state_address: '3/2/10'
     type: 'percent'
-

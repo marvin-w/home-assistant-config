@@ -5,6 +5,9 @@ logs
 __pycache__
 *.pyc
 
+# venv
+venv
+
 # Other
 core
 *.uuid
@@ -34,6 +37,7 @@ home-assistant.*
 known_devices.yaml
 entity_registry.yaml
 secrets.yaml
+!.stubs/secrets.yaml
 google_calendars.yaml
 SERVICE_ACCOUNT.json
 components

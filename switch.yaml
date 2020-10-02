@@ -4,4 +4,3 @@
     command_topic: 'cmnd/tasmota/infrarot/irsend'
     payload_on: '{"Protocol":"NEC_LIKE","Bits":32,"Data":"0x12488190","DataLSB":"0x48128109","Repeat":0}'
     payload_off: '{"Protocol":"NEC_LIKE","Bits":32,"Data":"0x12488090","DataLSB":"0x48120109","Repeat":0}'
-

@@ -1,4 +1,4 @@
----    
+---
     alias: 'Close garage if it has been opened for longer than 7 minutes'
     initial_state: True
     trigger:
