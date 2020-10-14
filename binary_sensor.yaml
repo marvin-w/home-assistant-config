@@ -3,3 +3,5 @@
   state_topic: "enocean/window_handle_tv/WIN"
   payload_on: "2"
   payload_off: "3"
+  device_class: window
+  unique_id: "mqtt_window_handle_tv"
