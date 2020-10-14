@@ -125,3 +125,4 @@ zone: !include zones.yaml
 automation: !include_dir_list automations/
 script: !include scripts.yaml
 input_boolean: !include input_boolean.yaml
+binary_sensor: !include binary_sensor.yaml

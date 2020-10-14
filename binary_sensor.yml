@@ -1,0 +1,5 @@
+- platform: mqtt
+  name: window_handle_tv
+  state_topic: "enocean/window_handle_tv/WIN"
+  payload_on: "2"
+  payload_off: "3"
