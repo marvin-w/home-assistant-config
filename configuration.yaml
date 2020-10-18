@@ -58,6 +58,9 @@ map:
 recorder:
   db_url: !env_var DB_CONNECTION
   purge_keep_days: 1500
+  exclude:
+    entities:
+      - sensor.xiaomi_map
 
 # Track the sun
 sun:
