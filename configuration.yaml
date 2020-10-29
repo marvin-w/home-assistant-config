@@ -73,7 +73,7 @@ octoprint:
 mobile_app:
 
 mqtt:
-  broker: 192.168.0.203
+  broker: !secret mqtt_host
   port: 1883
   client_id: 'Homeassistant'
   username: svc_user
