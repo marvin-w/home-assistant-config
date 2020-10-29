@@ -1,0 +1,11 @@
+---
+alias: 'Turns power plugs when main power is off - mainly used for the dashboard'
+initial_state: True
+trigger:
+  platform: state
+  entity_id: switch.schlafzimmer_wand_strom
+  to: 'off'
+action:
+  - service: switch.turn_off
+    entity_id:
+      - switch.schlafzimmer_steckdose_marvin
