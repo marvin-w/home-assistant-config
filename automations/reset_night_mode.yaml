@@ -5,5 +5,9 @@ trigger:
   event: sunrise
   offset: '+00:00:00'
 action:
-  service: input_boolean.turn_off
-  entity_id: input_boolean.night_mode
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.night_mode
+  - service: switch.turn_off
+    entity_id:
+      - switch.schlafzimmer_steckdose_marvin
+      - switch.schlafzimmer_wand_strom

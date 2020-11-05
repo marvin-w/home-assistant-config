@@ -4,6 +4,7 @@ initial_state: True
 trigger:
   platform: state
   entity_id: switch.schlafzimmer_wand_strom
+  from: 'on'
   to: 'off'
 action:
   - service: switch.turn_off

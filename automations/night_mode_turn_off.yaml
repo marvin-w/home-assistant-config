@@ -1,0 +1,16 @@
+---
+alias: 'Turn off everything after 55 seconds.'
+initial_state: True
+trigger:
+  platform: state
+  entity_id: input_boolean.night_mode
+  to: 'on'
+  for:
+    seconds: 60
+action:
+  - service: switch.turn_off
+    entity_id: switch.zentral
+  - service: media_player.turn_off
+    entity_id: media_player.livingroom_tv
+  - service: switch.turn_off
+    entity_id: switch.ac
