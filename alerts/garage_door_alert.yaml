@@ -1,11 +1,10 @@
-garage_door:
-  name: Garage ist offen
-  done_message: Garage ist geschlossen
-  entity_id: cover.garage
-  state: 'open'
-  repeat: 5
-  can_acknowledge: true
-  skip_first: false
-  notifiers:
-    - mobile_app_ane_lx1
-    - mobile_app_oneplus_a5000
+name: Garage ist offen
+done_message: Garage ist geschlossen
+entity_id: cover.garage
+state: 'open'
+repeat: 5
+can_acknowledge: true
+skip_first: false
+notifiers:
+  - mobile_app_ane_lx1
+  - mobile_app_oneplus_a5000
