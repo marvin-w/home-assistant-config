@@ -117,6 +117,7 @@ spotify:
 media_player: !include media_player.yaml
 
 
+alert: !include_dir_list alerts/
 switch: !include switch.yaml
 camera: !include camera.yml
 sensor: !include sensor.yaml
