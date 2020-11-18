@@ -19,7 +19,7 @@ scheduler of kubernetes works.
 
 ## Why do we automate?
 
-Automations in our house are there to help us reduce the number of repetitive tasks so we can focus on more important things.
+Automations in our home are there to help us reduce the number of repetitive tasks so we can focus on more important things.
 
 ## Approach to automations
 

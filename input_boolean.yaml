@@ -2,3 +2,8 @@ night_mode:
   name: Nachtszene aktivieren
   initial: False
   icon: mdi:clear-night
+
+christmas_mode:
+  name: Autom. Weihnachtsbeleuchtung aktivieren
+  initial: False
+  icon: mdi:string-lights
