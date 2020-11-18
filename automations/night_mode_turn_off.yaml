@@ -14,3 +14,5 @@ action:
     entity_id: media_player.livingroom_tv
   - service: switch.turn_off
     entity_id: switch.ac
+  - service: switch.turn_off
+    entity_id: switch.balkon2_steckdose
