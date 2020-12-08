@@ -1,44 +1,44 @@
-  # HVAC controller states
-  - name: Stellventil.Bad
-    state_address: '3/2/0'
-    type: 'percent'
+# HVAC controller states
+- name: Stellventil.Bad
+  state_address: '3/2/0'
+  type: 'percent'
 
-  - name: Stellventil.WC
-    state_address: '3/2/1'
-    type: 'percent'
+- name: Stellventil.WC
+  state_address: '3/2/1'
+  type: 'percent'
 
-  - name: Stellventil.Buero1
-    state_address: '3/2/2'
-    type: 'percent'
+- name: Stellventil.Buero1
+  state_address: '3/2/2'
+  type: 'percent'
 
-  - name: Stellventil.Buero2
-    state_address: '3/2/3'
-    type: 'percent'
+- name: Stellventil.Buero2
+  state_address: '3/2/3'
+  type: 'percent'
 
-  - name: Stellventil.Abstellraum
-    state_address: '3/2/4'
-    type: 'percent'
+- name: Stellventil.Abstellraum
+  state_address: '3/2/4'
+  type: 'percent'
 
-  - name: Stellventil.Wohnen1
-    state_address: '3/2/5'
-    type: 'percent'
+- name: Stellventil.Wohnen1
+  state_address: '3/2/5'
+  type: 'percent'
 
-  - name: Stellventil.Wohnen2
-    state_address: '3/2/6'
-    type: 'percent'
+- name: Stellventil.Wohnen2
+  state_address: '3/2/6'
+  type: 'percent'
 
-  - name: Stellventil.Wohnen3
-    state_address: '3/2/7'
-    type: 'percent'
+- name: Stellventil.Wohnen3
+  state_address: '3/2/7'
+  type: 'percent'
 
-  - name: Stellventil.Kueche
-    state_address: '3/2/8'
-    type: 'percent'
+- name: Stellventil.Kueche
+  state_address: '3/2/8'
+  type: 'percent'
 
-  - name: Stellventil.Gast
-    state_address: '3/2/9'
-    type: 'percent'
+- name: Stellventil.Gast
+  state_address: '3/2/9'
+  type: 'percent'
 
-  - name: Stellventil.Schlafzimmer
-    state_address: '3/2/10'
-    type: 'percent'
+- name: Stellventil.Schlafzimmer
+  state_address: '3/2/10'
+  type: 'percent'

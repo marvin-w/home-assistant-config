@@ -1,18 +1,17 @@
+- platform: group
+  name: "covers"
+  entities:
+    - cover.wohnenesszimmer
+    - cover.wohnenbalkon
+    - cover.wohnentv
+    - cover.kueche
+    - cover.gast
+    - cover.schlafzimmer
 
-  - platform: group
-    name: "covers"
-    entities:
-      - cover.wohnenesszimmer
-      - cover.wohnenbalkon
-      - cover.wohnentv
-      - cover.kueche
-      - cover.gast
-      - cover.schlafzimmer
-
-  - platform: mqtt
-    name: garage
-    command_topic: "garadget/garage/command"
-    state_topic: "garadget/garage/status"
-    payload_open: "open"
-    payload_close: "close"
-    value_template: "{{ value_json.status }}"
+- platform: mqtt
+  name: garage
+  command_topic: "garadget/garage/command"
+  state_topic: "garadget/garage/status"
+  payload_open: "open"
+  payload_close: "close"
+  value_template: "{{ value_json.status }}"

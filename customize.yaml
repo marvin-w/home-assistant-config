@@ -1,237 +1,241 @@
-  # Lights
-  light.schlafzimmer:
-    friendly_name: Schlafzimmer
-    icon: mdi:lightbulb
+# Lights
+light.schlafzimmer:
+  friendly_name: Schlafzimmer
+  icon: mdi:lightbulb
 
-  light.gaestezimmer:
-    friendly_name: Gästezimmer
-    icon: mdi:lightbulb
+light.gaestezimmer:
+  friendly_name: Gästezimmer
+  icon: mdi:lightbulb
 
-  light.flur:
-    friendly_name: Flur
-    icon: mdi:lightbulb
+light.flur:
+  friendly_name: Flur
+  icon: mdi:lightbulb
 
-  light.balkon1:
-    friendly_name: Balkon1
-    icon: mdi:lightbulb
+light.balkon1:
+  friendly_name: Balkon1
+  icon: mdi:lightbulb
 
-  light.balkon2:
-    friendly_name: Balkon
-    icon: mdi:lightbulb
+light.balkon2:
+  friendly_name: Balkon
+  icon: mdi:lightbulb
 
-  light.bad:
-    friendly_name: Bad
-    icon: mdi:lightbulb
+light.bad:
+  friendly_name: Bad
+  icon: mdi:lightbulb
 
-  light.kueche:
-    friendly_name: Küche
-    icon: mdi:lightbulb
+light.kueche:
+  friendly_name: Küche
+  icon: mdi:lightbulb
 
-  light.bad_spiegel:
-    friendly_name: Bad Spiegel
-    icon: mdi:lamp
+light.bad_spiegel:
+  friendly_name: Bad Spiegel
+  icon: mdi:lamp
 
-  light.kueche_leiste:
-    friendly_name: Lichterkette Wohnzimmer
-    icon: mdi:vector-line
+light.kueche_leiste:
+  friendly_name: Lichterkette Wohnzimmer
+  icon: mdi:vector-line
 
-  light.wohnzimmer_wand:
-    friendly_name: Wandleuchte
-    icon: mdi:lightbulb
+light.wohnzimmer_wand:
+  friendly_name: Wandleuchte
+  icon: mdi:lightbulb
 
-  light.wohnzimmer_schraege:
-    friendly_name: Licht Fernseher
-    icon: mdi:lightbulb
+light.wohnzimmer_schraege:
+  friendly_name: Licht Fernseher
+  icon: mdi:lightbulb
 
-  light.wohnzimmer_leiste:
-    friendly_name: Lichtleiste Wohnzimmer
-    icon: mdi:lightbulb
+light.wohnzimmer_leiste:
+  friendly_name: Lichtleiste Wohnzimmer
+  icon: mdi:lightbulb
 
-  light.wohnzimmer_sternenhimmel:
-    friendly_name: Sternenhimmel
-    icon: mdi:weather-night
+light.wohnzimmer_sternenhimmel:
+  friendly_name: Sternenhimmel
+  icon: mdi:weather-night
 
-  light.esszimmer:
-    friendly_name: Esszimmer
-    icon: mdi:ceiling-light
+light.esszimmer:
+  friendly_name: Esszimmer
+  icon: mdi:ceiling-light
 
-  light.wc:
-    friendly_name: WC
-    icon: mdi:lightbulb
+light.wc:
+  friendly_name: WC
+  icon: mdi:lightbulb
 
-  light.buero1:
-    friendly_name: Büro 1
-    icon: mdi:lightbulb
+light.buero1:
+  friendly_name: Büro 1
+  icon: mdi:lightbulb
 
-  light.buero2:
-    friendly_name: Büro 2
-    icon: mdi:lightbulb
+light.buero2:
+  friendly_name: Büro 2
+  icon: mdi:lightbulb
 
-  light.buero3:
-    friendly_name: Büro 3
-    icon: mdi:lightbulb
+light.buero3:
+  friendly_name: Büro 3
+  icon: mdi:lightbulb
 
-  light.buero:
-    friendly_name: Büro
-    icon: mdi:lightbulb
+light.buero:
+  friendly_name: Büro
+  icon: mdi:lightbulb
 
-  light.abstellraum:
-    friendly_name: Abstellraum
-    icon: mdi:lightbulb
+light.abstellraum:
+  friendly_name: Abstellraum
+  icon: mdi:lightbulb
 
-  # Device Tracker
-  device_tracker.marvin_wichmann_handy:
-    friendly_name: Marvin Wichmann
+# Device Tracker
+device_tracker.marvin_wichmann_handy:
+  friendly_name: Marvin Wichmann
 
-  # Covers
-  cover.schlafzimmer:
-    friendly_name: Schlafzimmer
+# Covers
+cover.schlafzimmer:
+  friendly_name: Schlafzimmer
 
-  cover.gast:
-    friendly_name: Gast
+cover.gast:
+  friendly_name: Gast
 
-  cover.kueche:
-    friendly_name: Küche Balkon
+cover.kueche:
+  friendly_name: Küche Balkon
 
-  cover.wohnen_esszimmer:
-    friendly_name: Esstisch Rolladen
+cover.wohnen_esszimmer:
+  friendly_name: Esstisch Rolladen
 
-  cover.wohnen_tv:
-    friendly_name: TV Rolladen
+cover.wohnen_tv:
+  friendly_name: TV Rolladen
 
-  cover.wohnen_balkon:
-    friendly_name: Balkon Rolladen
+cover.wohnen_balkon:
+  friendly_name: Balkon Rolladen
 
-  cover.dach_bad:
-    friendly_name: Dachfenster Bad
+cover.dach_bad:
+  friendly_name: Dachfenster Bad
 
-  cover.dach_wc:
-    friendly_name: Dachfenster WC
+cover.dach_wc:
+  friendly_name: Dachfenster WC
 
-  cover.covers:
-    friendly_name: Alle Rolläden
+cover.covers:
+  friendly_name: Alle Rolläden
 
-  cover.garage:
-    friendly_name: Garagentor
+cover.garage:
+  friendly_name: Garagentor
 
-  # Switches
-  switch.kueche_abzug:
-    friendly_name: Abzugshaube
-    icon: mdi:pinwheel
+# Switches
+switch.kueche_abzug:
+  friendly_name: Abzugshaube
+  icon: mdi:pinwheel
 
-  switch.wohnzimmer_stereoanlage:
-    friendly_name: Stereoanlage
-    icon: mdi:music
+switch.wohnzimmer_stereoanlage:
+  friendly_name: Stereoanlage
+  icon: mdi:music
 
-  switch.schlafzimmer_steckdose_marvin:
-    friendly_name: Steckdose Marvin
-    icon: mdi:power-plug
+switch.schlafzimmer_steckdose_marvin:
+  friendly_name: Steckdose Marvin
+  icon: mdi:power-plug
 
-  switch.schlafzimmer_wand_strom:
-    friendly_name: Freischaltung Strom Wand
-    icon: mdi:power-plug
+switch.schlafzimmer_wand_strom:
+  friendly_name: Freischaltung Strom Wand
+  icon: mdi:power-plug
 
-  switch.ac:
-    friendly_name: Lüftung
-    icon: mdi:air-conditioner
+switch.ac:
+  friendly_name: Lüftung
+  icon: mdi:air-conditioner
 
-  switch.climate:
-    friendly_name: Klimaanlage
-    icon: mdi:air-conditioner
+switch.climate:
+  friendly_name: Klimaanlage
+  icon: mdi:air-conditioner
 
-  switch.balkon2_steckdose:
-    friendly_name: Steckdose Balkon 2
-    icon: mdi:power-plug
+switch.balkon2_steckdose:
+  friendly_name: Steckdose Balkon
+  icon: mdi:power-plug
 
-  switch.buero_steckdose:
-    friendly_name: Steckdose Büro
-    icon: mdi:power-plug
+switch.balkon_steckdose:
+  friendly_name: Steckdose Balkon Küche
+  icon: mdi:power-plug
 
-  switch.flur_sperrfunktion:
-    friendly_name: Flur Bewegungsmelder
-    icon: mdi:motion-sensor
+switch.buero_steckdose:
+  friendly_name: Steckdose Büro
+  icon: mdi:power-plug
 
-  # Media player
-  media_player.livingroom_tv:
-    friendly_name: Fernseher Wohnzimmer
-    icon: mdi:television
+switch.flur_sperrfunktion:
+  friendly_name: Flur Bewegungsmelder
+  icon: mdi:motion-sensor
 
-  media_player.receiver:
-    friendly_name: Stereoanlage
+# Media player
+media_player.livingroom_tv:
+  friendly_name: Fernseher Wohnzimmer
+  icon: mdi:television
 
-  media_player.receiver_zone_2:
-    friendly_name: Stereoanlage Bad
+media_player.receiver:
+  friendly_name: Stereoanlage
 
-  media_player.spotify:
-    friendly_name: Spotify
+media_player.receiver_zone_2:
+  friendly_name: Stereoanlage Bad
 
-  # Climate
-  climate.schlaf:
-    friendly_name: Schlafzimmer
+media_player.spotify:
+  friendly_name: Spotify
 
-  climate.bad:
-    friendly_name: Bad
+# Climate
+climate.schlaf:
+  friendly_name: Schlafzimmer
 
-  climate.wohn:
-    friendly_name: Wohn & Esszimmer
+climate.bad:
+  friendly_name: Bad
 
-  climate.kueche:
-    friendly_name: Küche
+climate.wohn:
+  friendly_name: Wohn & Esszimmer
 
-  climate.buero:
-    friendly_name: Büro
+climate.kueche:
+  friendly_name: Küche
 
-  climate.gast:
-    friendly_name: Gästezimmer
+climate.buero:
+  friendly_name: Büro
 
-  climate.abstell:
-    friendly_name: Abstellraum
+climate.gast:
+  friendly_name: Gästezimmer
 
-  # Groups
-  group.all_lights:
-    friendly_name: Alle Lichter
+climate.abstell:
+  friendly_name: Abstellraum
 
-  group.all_switches:
-    friendly_name: Alle Schalter
+# Groups
+group.all_lights:
+  friendly_name: Alle Lichter
 
-  # Sensors
-  sensor.trash_appointment:
-    friendly_name: Nächste Müllleerung
-    icon: mdi:delete-empty
+group.all_switches:
+  friendly_name: Alle Schalter
 
-  sensor.garage_door_time_in_state:
-    friendly_name: 'seit'
-    icon: mdi:clock-outline
+# Sensors
+sensor.trash_appointment:
+  friendly_name: Nächste Müllleerung
+  icon: mdi:delete-empty
 
-  sensor.trash_appointment_days:
-    friendly_name: Tage bis zur nächsten Leerung
-    icon: mdi:delete-empty
+sensor.garage_door_time_in_state:
+  friendly_name: 'seit'
+  icon: mdi:clock-outline
 
-  sensor.abstell_window_access_control:
-    friendly_name: Abstellkammer Fenster
+sensor.trash_appointment_days:
+  friendly_name: Tage bis zur nächsten Leerung
+  icon: mdi:delete-empty
 
-  sensor.abstell_window_battery_level:
-    friendly_name: Abstellkammer Fenster Batterie
+sensor.abstell_window_access_control:
+  friendly_name: Abstellkammer Fenster
 
-  sensor.home_brightness_south:
-    friendly_name: Helligkeit Süden
+sensor.abstell_window_battery_level:
+  friendly_name: Abstellkammer Fenster Batterie
 
-  sensor.home_brightness_west:
-    friendly_name: Helligkeit Westen
+sensor.home_brightness_south:
+  friendly_name: Helligkeit Süden
 
-  sensor.home_brightness_east:
-    friendly_name: Helligkeit Osten
+sensor.home_brightness_west:
+  friendly_name: Helligkeit Westen
 
-  sensor.home_temperature:
-    friendly_name: Außentemperatur
+sensor.home_brightness_east:
+  friendly_name: Helligkeit Osten
 
-  sensor.home_wind_speed:
-    friendly_name: Windgeschwindigkeit
+sensor.home_temperature:
+  friendly_name: Außentemperatur
 
-  binary_sensor.home_rain_alarm:
-    friendly_name: Regenalarm
-    icon: mdi:rainy
+sensor.home_wind_speed:
+  friendly_name: Windgeschwindigkeit
 
-  switch.main_door:
-    friendly_name: Haustüre
-    icon: mdi:door
+binary_sensor.home_rain_alarm:
+  friendly_name: Regenalarm
+  icon: mdi:rainy
+
+switch.main_door:
+  friendly_name: Haustüre
+  icon: mdi:door

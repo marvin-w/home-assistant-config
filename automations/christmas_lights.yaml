@@ -1,10 +1,10 @@
 ---
-alias: 'Activates christmas lights when outside brightness is below 10 lx'
+alias: 'Activates christmas lights when outside brightness is below 15 lx'
 initial_state: True
 trigger:
   platform: numeric_state
   entity_id: sensor.home_brightness_south
-  below: 2.0
+  below: 15.0
 condition:
   - condition: state
     entity_id: input_boolean.christmas_mode
@@ -16,6 +16,7 @@ action:
   - service: switch.turn_on
     entity_id:
       - switch.balkon2_steckdose
+      - switch.balkon_steckdose
   - service: cover.set_cover_position
     data:
         entity_id: cover.kueche

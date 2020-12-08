@@ -1,35 +1,43 @@
-  - name: 'Kueche.Abzug'
-    address: '1/0/18'
-    state_address: '5/0/2'
+- name: 'Kueche.Abzug'
+  address: '1/0/18'
+  state_address: '5/0/2'
 
-  - name: 'Wohnzimmer.Stereoanlage'
-    address: '1/0/28'
-    state_address: '5/0/2'
+- name: 'Wohnzimmer.Stereoanlage'
+  address: '1/0/28'
+  state_address: '5/0/2'
 
-  - name: 'Schlafzimmer.Steckdose.Marvin'
-    address: '1/0/3'
-    state_address: '5/0/2'
+- name: 'Schlafzimmer.Steckdose.Marvin'
+  address: '1/0/3'
+  state_address: '5/0/2'
 
-  - name: 'Schlafzimmer.Wand.Strom'
-    address: '1/0/5'
-    state_address: '5/0/2'
+- name: 'Schlafzimmer.Wand.Strom'
+  address: '1/0/5'
+  state_address: '5/0/2'
 
-  - name: 'AC'
-    address: '4/0/0'
+- name: 'AC'
+  address: '4/0/0'
 
-  - name: 'Balkon2.Steckdose'
-    address: '1/0/30'
-    state_address: '5/0/2'
+- name: 'Balkon2.Steckdose'
+  address: '1/0/30'
+  state_address: '5/0/2'
 
-  - name: 'Buero.Steckdose'
-    address: '1/0/33'
+- name: 'Balkon.Steckdose'
+  address: '1/0/8'
+  state_address: '1/0/50'
 
-  - name: 'Flur.Sperrfunktion'
-    address: '1/0/44'
+- name: 'Flur.Bewegung'
+  address: '1/0/45'
 
-  - name: 'zentral'
-    address: '5/0/2'
-    state_address: '5/0/2'
+- name: 'Buero.Steckdose'
+  address: '1/0/33'
+  state_address: '1/0/49'
 
-  - name: "Main.Door" # DIY
-    address: '8/0/0' # only UP supported - resets after 3 seconds
+- name: 'Flur.Sperrfunktion'
+  address: '1/0/44'
+
+- name: 'zentral'
+  address: '5/0/2'
+  state_address: '5/0/2'
+
+- name: 'Main.Door' # DIY
+  address: '8/0/0' # only UP/ON supported - resets after 3 seconds

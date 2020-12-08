@@ -1,33 +1,33 @@
-    - platform: group
-      name: buero
-      entities:
-        - light.buero1
-        - light.buero2
-        - light.buero3
+- platform: group
+  name: buero
+  entities:
+    - light.buero1
+    - light.buero2
+    - light.buero3
 
-    - platform: group
-      name: bad_all
-      entities:
-        - light.bad
-        - light.bad_spiegel
+- platform: group
+  name: bad_all
+  entities:
+    - light.bad
+    - light.bad_spiegel
 
-    - platform: group
-      name: esszimmer_all
-      entities:
-        - light.esszimmer
-        - light.wohnzimmer_wand
-        - light.kueche_leiste
+- platform: group
+  name: esszimmer_all
+  entities:
+    - light.esszimmer
+    - light.wohnzimmer_wand
+    - light.kueche_leiste
 
-    - platform: group
-      name: kueche_all
-      entities:
-        - light.kueche
-        - light.kueche_leiste
+- platform: group
+  name: kueche_all
+  entities:
+    - light.kueche
+    - light.kueche_leiste
 
-    - platform: group
-      name: wohnzimmer_all
-      entities:
-        - light.wohnzimmer_schraege
-        - light.wohnzimmer_wand
-        - light.kueche_leiste
-        - light.wohnzimmer_sternenhimmel
+- platform: group
+  name: wohnzimmer_all
+  entities:
+    - light.wohnzimmer_schraege
+    - light.wohnzimmer_wand
+    - light.kueche_leiste
+    - light.wohnzimmer_sternenhimmel
