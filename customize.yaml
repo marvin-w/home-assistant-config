@@ -152,7 +152,11 @@ switch.buero_steckdose:
   icon: mdi:power-plug
 
 switch.flur_sperrfunktion:
-  friendly_name: Flur Bewegungsmelder
+  friendly_name: Flur Bewegungsmelder Aktiv?
+  icon: mdi:motion-sensor
+
+switch.flur_bewegung:
+  friendly_name: Flur Bewegungsmelder Status
   icon: mdi:motion-sensor
 
 # Media player
