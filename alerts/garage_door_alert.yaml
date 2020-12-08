@@ -6,5 +6,5 @@ repeat: 5
 can_acknowledge: true
 skip_first: false
 notifiers:
-  - mobile_app_ane_lx1
-  - mobile_app_oneplus_a5000
+  - mobile_app_kathleen
+  - mobile_app_marvin
