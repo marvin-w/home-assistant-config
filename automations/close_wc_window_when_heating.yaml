@@ -1,0 +1,15 @@
+---
+alias: 'Close wc ceiling window in winter when heating is on after 6 minutes.'
+initial_state: True
+trigger:
+  platform: state
+  entity_id: cover.dach_wc
+  to: 'open'
+  for: '00:06:00'
+condition:
+  - condition: numeric_state
+    entity_id: sensor.stellventil_wc
+    above: 0
+action:
+  - service: cover.close_cover
+    entity_id: cover.dach_wc

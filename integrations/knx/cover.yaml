@@ -57,6 +57,7 @@
   position_state_address: '2/0/23'
   travelling_time_down: 31
   travelling_time_up: 41
+  invert_position: True
 
 - name: "Dach.WC"
   move_long_address: '2/0/14'
@@ -64,3 +65,4 @@
   position_state_address: '2/0/24'
   travelling_time_down: 31
   travelling_time_up: 41
+  invert_position: True
