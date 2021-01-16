@@ -1,0 +1,46 @@
+---
+alias: 'Activates bed room lights when night mode is turned on.'
+initial_state: True
+trigger:
+  platform: state
+  entity_id: input_boolean.night_mode
+  to: 'on'
+action:
+  - service: light.turn_on
+    entity_id: light.schlafzimmer_strip
+    data:
+      brightness: 200
+  - delay:
+      minutes: 0.5
+  - service: light.turn_on
+    entity_id: light.schlafzimmer_strip
+    data:
+      brightness: 180
+  - delay:
+      minutes: 0.5
+  - service: light.turn_on
+    entity_id: light.schlafzimmer_strip
+    data:
+      brightness: 150
+  - delay:
+      minutes: 0.5
+  - service: light.turn_on
+    entity_id: light.schlafzimmer_strip
+    data:
+      brightness: 100
+  - delay:
+      minutes: 0.5
+  - service: light.turn_on
+    entity_id: light.schlafzimmer_strip
+    data:
+      brightness: 50
+  - delay:
+      minutes: 0.5
+  - service: light.turn_on
+    entity_id: light.schlafzimmer_strip
+    data:
+      brightness: 1
+  - delay:
+      minutes: 3
+  - service: light.turn_off
+    entity_id: light.schlafzimmer_strip
