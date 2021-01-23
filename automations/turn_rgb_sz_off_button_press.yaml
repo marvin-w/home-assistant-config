@@ -1,0 +1,15 @@
+---
+alias: 'Schlafzimmer RGB ON'
+trigger:
+  platform: numeric_state
+  entity_id: binary_sensor.schlafzimmer_rgb
+  attribute: counter
+  above: 0
+  below: 2
+condition:
+  - condition: state
+    entity_id: binary_sensor.schlafzimmer_rgb
+    state: 'on'
+action:
+  - service: light.turn_on
+    entity_id: light.schlafzimmer_strip
