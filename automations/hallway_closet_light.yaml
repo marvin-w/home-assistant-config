@@ -1,0 +1,17 @@
+---
+alias: 'Activate cabinet light in the hallway if motion is detected'
+initial_state: True
+trigger:
+  platform: state
+  entity_id: switch.flur_bewegung
+  to: 'on'
+action:
+  - service: switch.turn_on
+    entity_id:
+      - switch.flur
+  - delay:
+      minutes: 5
+  - service: switch.turn_off
+    entity_id:
+      - switch.flur
+      - switch.flur_bewegung
