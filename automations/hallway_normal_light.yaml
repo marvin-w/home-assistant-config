@@ -21,5 +21,7 @@ action:
       minutes: 5
   - service: switch.turn_off
     entity_id:
-      - light.flur
       - switch.flur_bewegung
+  - service: light.turn_off
+    entity_id:
+      - light.flur
