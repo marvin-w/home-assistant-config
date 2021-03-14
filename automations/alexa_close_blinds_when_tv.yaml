@@ -1,0 +1,32 @@
+---
+alias: 'Close covers via actionable notification'
+initial_state: True
+trigger:
+  platform: event
+  event_type: alexa_actionable_notification
+  event_data:
+    event_id: actionable_notification_close_covers_tv
+    event_response_type: ResponseYes
+action:
+- service: cover.set_cover_position
+  data:
+    entity_id: cover.wohnen_esszimmer
+    position: 65
+- service: cover.set_cover_position
+  data:
+    entity_id: cover.kueche
+    position: 65
+- service: cover.set_cover_position
+  data:
+    entity_id: cover.wohnen_tv
+    position: 65
+- service: cover.set_cover_position
+  data:
+    entity_id: cover.wohnen_balkon
+    position: 65
+- service: notify.alexa_media
+  data_template:
+    target: "media_player.alexa_kueche"
+    message: "Ich habe deine Rolläden entsprechend runter gemacht."
+    data:
+      type: "tts"

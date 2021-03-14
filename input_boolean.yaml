@@ -5,5 +5,4 @@ night_mode:
 
 christmas_mode:
   name: Autom. Weihnachtsbeleuchtung aktivieren
-  initial: True
   icon: mdi:string-lights

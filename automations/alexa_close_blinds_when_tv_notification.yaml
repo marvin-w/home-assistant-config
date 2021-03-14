@@ -1,0 +1,17 @@
+---
+alias: 'Trigger alexa notification to ask if the blinds should be closed.'
+initial_state: True
+trigger:
+  platform: state
+  entity_id: input_boolean.christmas_mode
+  to: 'on'
+condition:
+  - condition: state
+    entity_id: input_boolean.christmas_mode
+    state: 'on'
+action:
+  - service: script.activate_alexa_actionable_notification
+    data_template:
+      text: 'Dein Fernseher ist an und draußen ist es sehr hell. Möchtest du dass ich die Rolläden im Wohnzimmer teilweiße schließe?'
+      event_id: 'actionable_notification_close_covers_tv'
+      alexa_device: 'media_player.alexa_kueche'
