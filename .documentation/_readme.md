@@ -29,7 +29,7 @@ Last but not least there are also a couple Raspis sitting around here and there 
 My Home Assistant runs on a single node Kubernetes cluster within my rack at home. I decided to go for this approach simply because I love how easy it is to configure new deployments and how great the
 scheduler of kubernetes works.
 
-Over the past few years I have extended my Home with many more integrations. I'm currently using the following:
+Over the past few years I have extended my home with many more integrations. I'm currently using the following:
 
 - KNX (for lights, climate, covers, door, etc.)
 - ZWave (smart plugs with power meters for those that can not already be controlled with KNX)
@@ -40,6 +40,7 @@ Over the past few years I have extended my Home with many more integrations. I'm
 - Spotify (well, for listening to spotify)
 - Onkyo (for my stereo receiver)
 - Octoprint (for my 3D printer)
+- Alexa (voice assistant)
 
 ## Approach to automations
 
