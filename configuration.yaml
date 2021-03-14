@@ -9,6 +9,11 @@ homeassistant:
 
 default_config:
 
+api:
+
+alexa:
+  smart_home:
+
 # Enables the frontend
 frontend:
 

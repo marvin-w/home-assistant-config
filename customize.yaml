@@ -86,33 +86,42 @@ device_tracker.marvin_wichmann_handy:
 # Covers
 cover.schlafzimmer:
   friendly_name: Schlafzimmer
+  device_class: blind
 
 cover.gast:
   friendly_name: Gast
+  device_class: blind
 
 cover.kueche:
-  friendly_name: Küche Balkon
+  friendly_name: Küche
+  device_class: blind
 
 cover.wohnen_esszimmer:
-  friendly_name: Esstisch Rolladen
+  friendly_name: Esstisch
+  device_class: blind
 
 cover.wohnen_tv:
-  friendly_name: TV Rolladen
+  friendly_name: TV
+  device_class: blind
 
 cover.wohnen_balkon:
-  friendly_name: Balkon Rolladen
+  friendly_name: Balkon
+  device_class: blind
 
 cover.dach_bad:
   friendly_name: Dachfenster Bad
+  device_class: window
 
 cover.dach_wc:
   friendly_name: Dachfenster WC
+  device_class: window
 
 cover.covers:
   friendly_name: Alle Rolläden
 
 cover.garage:
   friendly_name: Garagentor
+  device_class: garage
 
 # Switches
 switch.kueche_abzug:
