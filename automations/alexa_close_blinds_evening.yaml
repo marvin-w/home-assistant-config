@@ -1,0 +1,13 @@
+---
+alias: 'Trigger alexa notification to ask if the blinds should be closed in the evening.'
+initial_state: True
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.home_brightness_south
+    below: 400
+action:
+  - service: script.activate_alexa_actionable_notification
+    data_template:
+      text: 'Es wird langsam dunkel. Soll ich deine Rolläden für dich schließen und das Licht anschalten?'
+      event_id: 'actionable_notification_close_covers_evening'
+      alexa_device: 'media_player.alexa_kueche'

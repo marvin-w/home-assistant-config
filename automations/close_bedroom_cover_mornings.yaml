@@ -13,4 +13,4 @@ action:
   - service: cover.set_cover_position
     data:
       entity_id: cover.schlafzimmer
-      position: 60
+      position: 90

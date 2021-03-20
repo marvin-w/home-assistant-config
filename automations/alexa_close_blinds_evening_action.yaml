@@ -1,0 +1,31 @@
+---
+alias: 'Close covers in the evening via actionable notification'
+initial_state: True
+trigger:
+  platform: event
+  event_type: alexa_actionable_notification
+  event_data:
+    event_id: actionable_notification_close_covers_evening
+    event_response_type: ResponseYes
+action:
+- service: cover.close_cover
+  data:
+    entity_id: cover.wohnen_esszimmer
+- service: cover.close_cover
+  data:
+    entity_id: cover.kueche
+- service: cover.close_cover
+  data:
+    entity_id: cover.wohnen_tv
+- service: cover.close_cover
+  data:
+    entity_id: cover.wohnen_balkon
+- service: cover.close_cover
+  data:
+    entity_id: cover.gast
+- service: notify.alexa_media
+  data_template:
+    target: "media_player.alexa_kueche"
+    message: "Deine Rolläden sind jetzt geschlossen."
+    data:
+      type: "tts"
