@@ -5,6 +5,7 @@
 - name: schlafzimmer_rgb
   state_address: '6/0/3'
   ignore_internal_state: True
+  context_timeout: 0.3
 - name: cover_abstell
   state_address: "2/0/33"
   context_timeout: 1.0

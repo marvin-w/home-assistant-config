@@ -23,6 +23,9 @@ action:
 - service: cover.close_cover
   data:
     entity_id: cover.gast
+- service: light.turn_on
+  data:
+    entity_id: light.wohnzimmer_sternenhimmel
 - service: notify.alexa_media
   data_template:
     target: "media_player.alexa_kueche"
