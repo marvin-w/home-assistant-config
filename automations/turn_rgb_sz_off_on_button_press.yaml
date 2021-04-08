@@ -1,5 +1,6 @@
 ---
 alias: 'Schlafzimmer RGB OFF'
+id: f8ebde06-a6eb-49e5-a89b-cc7e7b6507f3
 trigger:
   platform: numeric_state
   entity_id: binary_sensor.schlafzimmer_rgb

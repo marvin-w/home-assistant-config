@@ -1,5 +1,6 @@
 ---
     alias: 'Update garage settings'
+    id: aec42a07-ebc2-4d40-92e9-7758c6e32d3e
     trigger:
       platform: time_pattern
       seconds: /59

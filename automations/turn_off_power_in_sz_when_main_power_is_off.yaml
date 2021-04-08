@@ -1,6 +1,7 @@
 ---
 alias: 'Turns power plugs when main power is off - mainly used for the dashboard'
 initial_state: True
+id: e0f717a2-ea6e-42d8-9814-5300f6170ffe
 trigger:
   platform: state
   entity_id: switch.schlafzimmer_wand_strom

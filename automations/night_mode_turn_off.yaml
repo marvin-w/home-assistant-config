@@ -1,6 +1,7 @@
 ---
 alias: 'Turn off everything after 55 seconds.'
 initial_state: True
+id: d541716e-cfa0-4b56-8af2-a203375eb6e4
 trigger:
   platform: state
   entity_id: input_boolean.night_mode

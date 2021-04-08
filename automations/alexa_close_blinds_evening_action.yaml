@@ -1,6 +1,7 @@
 ---
 alias: 'Close covers in the evening via actionable notification'
 initial_state: True
+id: 81973005-84e9-44e0-95b6-cdcafb904d6f
 trigger:
   platform: event
   event_type: alexa_actionable_notification

@@ -1,6 +1,7 @@
 ---
 alias: 'Closed bedroom cover when the sun goes up in the morning and we are at home'
 initial_state: True
+id: 9725c1e7-0a49-4359-b376-7838ff8598f7
 trigger:
   platform: sun
   event: sunrise

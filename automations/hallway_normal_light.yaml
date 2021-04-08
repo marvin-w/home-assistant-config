@@ -1,6 +1,7 @@
 ---
 alias: 'Activate cabinet light in the hallway if motion is detected'
 initial_state: True
+id: 6458fa48-9ed7-421c-93c4-7293385c4eb4
 trigger:
   platform: state
   entity_id: switch.flur_bewegung

@@ -1,5 +1,6 @@
 ---
 alias: 'Reset night mode'
+id: b9de77aa-3660-4c00-85ff-543484ffc9a5
 trigger:
   platform: sun
   event: sunrise

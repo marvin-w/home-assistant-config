@@ -1,6 +1,7 @@
 ---
 alias: 'Switch main door to off when used - off triggers the connector and sends the signal to the basement'
 initial_state: True
+id: e16f6de2-0e27-4a80-9d97-b94940ccbca0
 trigger:
   platform: state
   entity_id: switch.main_door

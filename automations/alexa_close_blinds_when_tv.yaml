@@ -1,6 +1,7 @@
 ---
 alias: 'Close covers via actionable notification'
 initial_state: True
+id: 8fe8c682-fad9-45de-af9b-7ede152a7f7c
 trigger:
   platform: event
   event_type: alexa_actionable_notification

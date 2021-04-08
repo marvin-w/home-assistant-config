@@ -1,5 +1,6 @@
 ---
 alias: 'Binary sensor test counter=1 on'
+id: 9c66e778-d1bc-43fb-bd05-041c83106248
 trigger:
   platform: numeric_state
   entity_id: binary_sensor.cover_abstell

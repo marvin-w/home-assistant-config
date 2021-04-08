@@ -1,6 +1,7 @@
 ---
     alias: 'Correct settings when turning on climate'
     initial_state: True
+    id: 7dcfc1ab-52a8-4188-819a-81fa0ce46878
     trigger:
       - platform: template
         value_template: "{% if states.switch.climate.state | string == 'on' %}true{% endif %}"

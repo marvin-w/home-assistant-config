@@ -1,6 +1,7 @@
 ---
 alias: 'Activates night mode'
 initial_state: True
+id: c79eab0d-20ca-416b-8183-e866daef6f67
 trigger:
   platform: state
   entity_id: input_boolean.night_mode

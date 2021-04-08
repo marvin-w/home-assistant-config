@@ -1,6 +1,7 @@
 ---
 alias: 'Take daily reminder'
 initial_state: True
+id: ba967e2a-b3e3-4b61-a72b-8d2193a5e1f6
 trigger:
   - platform: template
     value_template: "{% if states.sensor.daily_reminder.state | int < 1 %}true{% endif %}"

@@ -1,6 +1,7 @@
 ---
 alias: 'Trigger alexa notification to ask if the blinds should be closed.'
 initial_state: True
+id: 1ea50f08-d85f-4cc5-8a4e-1cb728e81b13
 trigger:
   - platform: template
     value_template: "{% if states.media_player.livingroom_tv.state | string == 'on' %}true{% endif %}"

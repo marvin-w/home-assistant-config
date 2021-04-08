@@ -1,6 +1,7 @@
 ---
     alias: 'Read NFC: Toggle garage state - MWI'
     initial_state: True
+    id: 8d9f1183-a132-4161-869f-98dec883f60c
     trigger:
       platform: event
       event_type: tag_scanned

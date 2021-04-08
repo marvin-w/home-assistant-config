@@ -1,6 +1,7 @@
 ---
 alias: 'Activates bed room lights when night mode is turned on.'
 initial_state: True
+id: 40632f46-ccdd-44ec-8b58-40738624b90b
 trigger:
   platform: state
   entity_id: input_boolean.night_mode

@@ -1,5 +1,7 @@
 ---
 alias: 'Trigger alexa notification to ask if the blinds should be closed in the evening.'
+
+id: 30844172-02cd-463e-aada-99a297d8a7d0
 initial_state: True
 trigger:
   - platform: numeric_state

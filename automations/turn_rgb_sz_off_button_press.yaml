@@ -1,5 +1,6 @@
 ---
 alias: 'Schlafzimmer RGB ON'
+id: 920de72a-9911-4530-bcdf-9048f7f00cd7
 trigger:
   platform: numeric_state
   entity_id: binary_sensor.schlafzimmer_rgb

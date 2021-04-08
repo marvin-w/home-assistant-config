@@ -1,6 +1,7 @@
 ---
 alias: 'Activates christmas lights when outside brightness is below 15 lx'
 initial_state: True
+id: 1b8c80d1-8f60-4ad6-9de0-8d3e2236f477
 trigger:
   platform: numeric_state
   entity_id: sensor.home_brightness_south

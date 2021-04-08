@@ -1,28 +1,35 @@
 - name: 'Kueche.Abzug'
-  address: '1/0/18'
-  state_address: '5/0/2'
+  address:
+  - '1/0/18'
+  - '5/0/2'
 
 - name: 'Wohnzimmer.Stereoanlage'
-  address: '1/0/28'
-  state_address: '5/0/2'
+  address:
+  - '1/0/28'
+  - '5/0/2'
 
 - name: 'Schlafzimmer.Steckdose.Marvin'
-  address: '1/0/3'
-  state_address: '5/0/2'
+  address:
+  - '1/0/3'
+  - '5/0/2'
 
 - name: 'Schlafzimmer.Wand.Strom'
-  address: '1/0/5'
-  state_address: '5/0/2'
+  address:
+  - '1/0/5'
+  - '5/0/2'
 
 - name: 'AC'
   address: '4/0/0'
 
 - name: 'Balkon2.Steckdose'
-  address: '1/0/30'
-  state_address: '5/0/2'
+  address:
+  - '1/0/30'
+  - '5/0/2'
 
 - name: 'Balkon.Steckdose'
-  address: '1/0/8'
+  address:
+  - '1/0/8'
+  - '5/0/2'
   state_address: '1/0/50'
 
 - name: 'Flur.Bewegung'

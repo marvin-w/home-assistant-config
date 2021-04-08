@@ -1,5 +1,6 @@
 ---
     alias: 'Take pill reminder'
+    id: 6266532c-d31e-4a96-aa5c-366a3869f8b6
     initial_state: True
     trigger:
       - platform: template

@@ -1,6 +1,7 @@
 ---
 alias: 'Close bathroom ceiling window in winter when heating is on after 6 minutes.'
 initial_state: True
+id: b51e6b25-6cdd-47c5-8505-45556f64e10e
 trigger:
   platform: state
   entity_id: cover.dach_bad

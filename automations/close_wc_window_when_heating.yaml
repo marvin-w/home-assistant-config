@@ -1,6 +1,7 @@
 ---
 alias: 'Close wc ceiling window in winter when heating is on after 6 minutes.'
 initial_state: True
+id: 5e3bcd1d-9e51-4b6d-8ed2-9b37f851489e
 trigger:
   platform: state
   entity_id: cover.dach_wc
