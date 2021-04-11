@@ -49,6 +49,7 @@ knx:
  climate: !include integrations/knx/climate.yaml
  sensor: !include integrations/knx/sensor.yaml
  switch: !include integrations/knx/switch.yaml
+ expose: !include integrations/knx/expose.yaml
 
 
 # Enables a map showing the location of tracked devices

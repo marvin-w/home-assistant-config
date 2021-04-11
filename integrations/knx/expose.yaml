@@ -1,0 +1,3 @@
+- type: string
+  address: "6/0/4"
+  entity_id: sensor.next_trash

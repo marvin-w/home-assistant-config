@@ -56,3 +56,6 @@
       friendly_name: 'Torstatus'
       value_template: '{{ states.cover.garage.state }}'
       icon_template: '{% if is_state("cover.garage", "closed") %}mdi:garage{% else %}mdi:garage-open{% endif %}'
+    next_trash:
+      friendly_name: 'KNX Nächste Müllleerung Fixed length 14'
+      value_template: '{{ states("sensor.trash_appointment")[0:14] }}'
