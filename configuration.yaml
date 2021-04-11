@@ -54,8 +54,8 @@ knx:
 # Enables a map showing the location of tracked devices
 map:
 
-#logger:
-  #default: info
+logger:
+  default: info
   #  logs:
   #  xknx: debug
 
@@ -78,6 +78,8 @@ octoprint:
 mobile_app:
 
 mqtt:
+  discovery: true
+  discovery_prefix: homeassistant 
   broker: !secret mqtt_host
   port: 1883
   client_id: 'Homeassistant'
@@ -129,10 +131,25 @@ sensor: !include sensor.yaml
 cover: !include cover.yaml
 light: !include light.yaml
 group: !include groups.yaml
-vacuum: !include vacuum.yml
 zone: !include zones.yaml
 automation: !include_dir_list automations/
 script: !include scripts.yaml
 input_boolean: !include input_boolean.yaml
 input_text: !include input_text.yaml
 binary_sensor: !include binary_sensor.yaml
+
+
+
+intent_script:
+  ZonedCleanupIntent:
+    action:
+      service: script.turn_on
+      target:
+        entity_id: script.vacuum_{{ Room | lower }}
+    speech:
+      type: plain
+      text: !include alexa_confirm.yaml
+  AMAZON.FallbackIntent:
+    speed:
+      type: plain
+      text: "Ich habe dich leider nicht verstanden. Bitte versuche es erneut. Du kannst zum Beispiel versuchen zu sagen Alexa, sag home assistant es soll die küche reinigen."

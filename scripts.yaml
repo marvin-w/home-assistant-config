@@ -20,3 +20,80 @@ activate_alexa_actionable_notification:
           entity_id: "{{ alexa_device }}"
           media_content_type: skill
           media_content_id: amzn1.ask.skill.0bf54ab9-3332-4445-9c49-657fe5d7c9e0
+
+
+
+# todo: parameterize this stuff...
+# see https://valetudo.cloud/pages/integrations/home-assistant-integration.html
+vacuum_bad:
+     alias: "vacuum bad"
+     sequence:
+       - service: vacuum.send_command
+         data:
+           entity_id: 'vacuum.rockrobo'
+           command: 'zoned_cleanup'
+           params:
+             'zone_ids': ['0844139d-ef95-4afb-9fde-da702ca2f7c3']
+
+vacuum_kuche:
+     alias: "vacuum küche"
+     sequence:
+       - service: vacuum.send_command
+         data:
+           entity_id: 'vacuum.rockrobo'
+           command: 'zoned_cleanup'
+           params:
+             'zone_ids': ['1eac7496-d1f7-46e9-a2fc-a65a7a3737f3']
+
+
+vacuum_buro:
+     alias: "vacuum büro"
+     sequence:
+       - service: vacuum.send_command
+         data:
+           entity_id: 'vacuum.rockrobo'
+           command: 'zoned_cleanup'
+           params:
+             'zone_ids': ['d967306c-bcdb-4177-8cfc-f774717604e6']
+    
+vacuum_wohnzimmer:
+     alias: "vacuum wohnzimmer"
+     sequence:
+       - service: vacuum.send_command
+         data:
+           entity_id: 'vacuum.rockrobo'
+           command: 'zoned_cleanup'
+           params:
+             'zone_ids': ['160e36c4-af72-4136-8181-9403706f3c95']
+          
+vacuum_flur:
+     alias: "vacuum flur"
+     sequence:
+       - service: vacuum.send_command
+         data:
+           entity_id: 'vacuum.rockrobo'
+           command: 'zoned_cleanup'
+           params:
+             'zone_ids': ['0c7381ec-9d87-40c4-999f-03382c28bc64']
+
+
+vacuum_abstellkammer:
+     alias: "vacuum abstellkammer"
+     sequence:
+       - service: vacuum.send_command
+         data:
+           entity_id: 'vacuum.rockrobo'
+           command: 'zoned_cleanup'
+           params:
+             'zone_ids': ['90dbedf8-46e1-4560-973e-571730f8a091']
+
+
+vacuum_schlafzimmer:
+     alias: "vacuum schlafzimmer"
+     sequence:
+       - service: vacuum.send_command
+         data:
+           entity_id: 'vacuum.rockrobo'
+           command: 'zoned_cleanup'
+           params:
+             'zone_ids': ['25f2862e-9a3c-4c58-b388-44a11a73a149']

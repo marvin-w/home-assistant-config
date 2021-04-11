@@ -6,5 +6,5 @@
   address_wind_speed: "7/0/2"
   address_rain_alarm: "7/0/0"
   address_day_night: "7/0/7"
-  expose_sensors: True
+  create_sensors: True
   sync_state: True

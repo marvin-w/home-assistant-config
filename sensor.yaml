@@ -50,12 +50,6 @@
   state_topic: 'garadget/garage/status'
   value_template: '{{ value_json.time }}'
 
-- platform: mqtt
-  state_topic: "valetudo/rockrobo/state"
-  json_attributes_topic: "valetudo/rockrobo/map_data"
-  name: xiaomi_map
-  value_template: 'OK'
-
 - platform: template
   sensors:
     garage_door_status:

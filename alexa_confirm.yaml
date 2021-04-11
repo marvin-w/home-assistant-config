@@ -1,0 +1,17 @@
+>
+  {{ [
+    "OK",
+    "Natürlich",
+    "Gerne",
+    "Seh es als erledigt an",
+    "Kein Problem",
+    "Ich kann das tun",
+    "Lass mich das für dich erledigen",
+    "Das mach ich gerne",
+    "Wie du willst",
+    "Du befiehlst, ich erledige",
+    "Positiv",
+    "Ja Sir",
+    "Ich mache",
+    "Wie du es verfügst, so soll es auch sein"
+      ] | random }}
