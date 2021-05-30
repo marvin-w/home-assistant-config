@@ -1,0 +1,15 @@
+---
+alias: 'Close sun protection blind in the abstellzimmer in the morning if enabled'
+initial_state: True
+id: 837459087234985723457982345782394
+trigger:
+  platform: sun
+  event: sunrise
+  offset: "-00:30"
+condition:
+  - condition: state
+    entity_id: 'input_boolean.sun_protection'
+    state: 'on'
+action:
+  - service: cover.close_cover
+    entity_id: cover.abstellkammer

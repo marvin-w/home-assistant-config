@@ -6,3 +6,7 @@ night_mode:
 christmas_mode:
   name: Autom. Weihnachtsbeleuchtung aktivieren
   icon: mdi:string-lights
+
+sun_protection:
+  name: Sonnenschutz Modus
+  icon: mdi:shield-sun
