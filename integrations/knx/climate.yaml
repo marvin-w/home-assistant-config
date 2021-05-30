@@ -44,13 +44,13 @@
   max_temp: 35.0
 
 - name: buero
-  operation_mode_frost_protection_address: '3/1/30'
-  temperature_address: '3/1/31'
-  operation_mode_comfort_address: '3/1/32'
-  operation_mode_night_address: '3/1/33'
-  target_temperature_address: '3/1/10'
-  target_temperature_state_address: '3/1/34'
-  controller_status_state_address: '3/1/35'
+  operation_mode_address: '3/4/0'
+  temperature_address: '3/4/1'
+  operation_mode_state_address: '3/4/8'
+  target_temperature_state_address: '3/4/2'
+  setpoint_shift_address: '3/4/3'
+  setpoint_shift_state_address: '3/4/3'
+  setpoint_shift_mode: 'DPT9002'
   min_temp: 7.0
   max_temp: 35.0
 
