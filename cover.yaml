@@ -8,10 +8,3 @@
     - cover.gast
     - cover.schlafzimmer
 
-- platform: mqtt
-  name: garage
-  command_topic: "garadget/garage/command"
-  state_topic: "garadget/garage/status"
-  payload_open: "open"
-  payload_close: "close"
-  value_template: "{{ value_json.status }}"

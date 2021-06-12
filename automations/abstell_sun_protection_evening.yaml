@@ -1,7 +1,6 @@
 ---
 alias: 'Open sun protection blind in the abstellzimmer in the evening if enabled'
 initial_state: True
-id: 982376450982367890234675345676
 trigger:
   platform: sun
   event: sunset
@@ -12,4 +11,4 @@ condition:
     state: 'on'
 action:
   - service: cover.open_cover
-    entity_id: cover.abstellkammer
+    entity_id: cover.sonne_abstellkammer
