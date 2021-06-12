@@ -42,3 +42,23 @@
 - name: Stellventil.Schlafzimmer
   state_address: '3/2/10'
   type: 'percent'
+
+- name: Weather.BrightnessEast
+  state_address: '7/0/4'
+  type: 'brightness'
+
+- name: Weather.BrightnessWest
+  state_address: '7/0/3'
+  type: 'brightness'
+
+- name: Weather.BrightnessSouth
+  state_address: '7/0/5'
+  type: 'brightness'
+
+- name: Weather.WindSpeed
+  state_address: '7/0/2'
+  type: 'wind_speed_ms'
+
+- name: Weather.OutsideTemperature
+  state_address: '7/0/1'
+  type: 'temperature'

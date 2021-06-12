@@ -10,3 +10,5 @@
   state_address: "2/0/33"
   context_timeout: 1.0
   ignore_internal_state: True
+- name: Weather.RainAlarm
+  state_address: '7/0/0'
