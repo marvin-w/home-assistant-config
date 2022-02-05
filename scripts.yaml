@@ -55,7 +55,7 @@ vacuum_buro:
            command: 'zoned_cleanup'
            params:
              'zone_ids': ['d967306c-bcdb-4177-8cfc-f774717604e6']
-    
+
 vacuum_wohnzimmer:
      alias: "vacuum wohnzimmer"
      sequence:
@@ -65,7 +65,7 @@ vacuum_wohnzimmer:
            command: 'zoned_cleanup'
            params:
              'zone_ids': ['160e36c4-af72-4136-8181-9403706f3c95']
-          
+
 vacuum_flur:
      alias: "vacuum flur"
      sequence:

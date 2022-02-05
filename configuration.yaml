@@ -80,7 +80,7 @@ mobile_app:
 
 mqtt:
   discovery: true
-  discovery_prefix: homeassistant 
+  discovery_prefix: homeassistant
   broker: !secret mqtt_host
   port: 1883
   client_id: 'Homeassistant'

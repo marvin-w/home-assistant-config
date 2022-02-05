@@ -46,7 +46,7 @@
         {% set trash = state_attr("calendar.marvin_fam_wichmann_de", "message") | replace("Kämpfelbach: ", "") %}
         {{ trash + " am " +  trash_date }}
     trash_appointment_days:
-      friendly_name: 'Tage bis zur nächsten Müllleerung' 
+      friendly_name: 'Tage bis zur nächsten Müllleerung'
       value_template: >
         {% set trash_date = as_local(as_datetime(strptime(state_attr("calendar.marvin_fam_wichmann_de", "start_time"), ""))) %}
         {{ (trash_date - as_local(utcnow())).days | int }}
