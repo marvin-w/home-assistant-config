@@ -1,0 +1,20 @@
+---
+alias: 'Open main door via actionable notification'
+initial_state: True
+id: 8fe8c632-fad9-45de-af9b-7ede152a7f5f
+trigger:
+  platform: event
+  event_type: alexa_actionable_notification
+  event_data:
+    event_id: actionable_notification_open_door
+    event_response_type: ResponseYes
+action:
+- service: switch.turn_on
+  data:
+    entity_id: switch.main_door
+- service: notify.alexa_media
+  data_template:
+    target: "media_player.alexa_kueche"
+    message: "Die Türe ist jetzt geöffnet."
+    data:
+      type: "tts"
