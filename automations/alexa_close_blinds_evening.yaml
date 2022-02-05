@@ -6,7 +6,7 @@ initial_state: True
 trigger:
   - platform: numeric_state
     entity_id: sensor.home_brightness_south
-    below: 400
+    below: 50
 action:
   - service: script.activate_alexa_actionable_notification
     data_template:

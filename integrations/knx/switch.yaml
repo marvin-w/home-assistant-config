@@ -21,6 +21,11 @@
 - name: 'AC'
   address: '4/0/0'
 
+- name: wohnzimmer.monitor
+  address:
+  - '6/0/5'
+  - '5/0/2'
+
 - name: 'Balkon2.Steckdose'
   address:
   - '1/0/30'

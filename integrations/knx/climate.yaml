@@ -11,13 +11,13 @@
   max_temp: 35.0
 
 - name: bad
-  operation_mode_frost_protection_address: '3/1/12'
-  temperature_address: '3/1/13'
-  operation_mode_comfort_address: '3/1/14'
-  operation_mode_night_address: '3/1/15'
-  target_temperature_address: '3/1/7'
-  target_temperature_state_address: '3/1/16'
-  controller_status_state_address: '3/1/17'
+  operation_mode_address: '3/5/0'
+  temperature_address: '3/5/1'
+  operation_mode_state_address: '3/5/6'
+  target_temperature_state_address: '3/5/8'
+  setpoint_shift_address: '3/5/3'
+  setpoint_shift_state_address: '3/5/4'
+  setpoint_shift_mode: 'DPT9002'
   min_temp: 7.0
   max_temp: 35.0
 

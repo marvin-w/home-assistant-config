@@ -46,6 +46,7 @@ from .const import (
     CONF_COOKIES_TXT,
     CONF_DEBUG,
     CONF_EXCLUDE_DEVICES,
+    CONF_EXTENDED_ENTITY_DISCOVERY,
     CONF_HASS_URL,
     CONF_INCLUDE_DEVICES,
     CONF_OAUTH,
@@ -56,6 +57,7 @@ from .const import (
     CONF_SECURITYCODE,
     CONF_TOTP_REGISTER,
     DATA_ALEXAMEDIA,
+    DEFAULT_EXTENDED_ENTITY_DISCOVERY,
     DEFAULT_QUEUE_DELAY,
     DOMAIN,
     HTTP_COOKIE_HEADER,
@@ -378,10 +380,8 @@ class AlexaMediaFlowHandler(config_entries.ConfigFlow):
         )
         if self.login.lastreq:
             self.proxy.last_resp = self.login.lastreq
-            self.proxy.session.cookie_jar.update_cookies(
-                self.login._session.cookie_jar.filter_cookies(
-                    self.proxy._host_url.with_path("/")
-                )
+            self.proxy.session.cookies = self.login._session.cookie_jar.filter_cookies(
+                self.proxy._host_url.with_path("/")
             )
             proxy_url = (
                 self.proxy.access_url().with_path(AUTH_PROXY_PATH) / "resume"
@@ -661,8 +661,10 @@ class AlexaMediaFlowHandler(config_entries.ConfigFlow):
             }
             self.hass.data.setdefault(
                 DATA_ALEXAMEDIA,
-                {"accounts": {}, "config_flows": {}},
+                {"accounts": {}, "config_flows": {}, "notify_service": None},
             )
+            self.hass.data[DATA_ALEXAMEDIA].setdefault("accounts", {})
+            self.hass.data[DATA_ALEXAMEDIA].setdefault("config_flows", {})
             if existing_entry:
                 self.hass.config_entries.async_update_entry(
                     existing_entry, data=self.config
@@ -675,6 +677,12 @@ class AlexaMediaFlowHandler(config_entries.ConfigFlow):
                 self.hass.components.persistent_notification.async_dismiss(
                     f"alexa_media_{slugify(email)}{slugify(login.url[7:])}"
                 )
+                if not self.hass.data[DATA_ALEXAMEDIA]["accounts"].get(
+                    self.config[CONF_EMAIL]
+                ):
+                    self.hass.data[DATA_ALEXAMEDIA]["accounts"][
+                        self.config[CONF_EMAIL]
+                    ] = {}
                 self.hass.data[DATA_ALEXAMEDIA]["accounts"][self.config[CONF_EMAIL]][
                     "login_obj"
                 ] = self.login
@@ -1025,7 +1033,14 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
                     default=self.config_entry.options.get(
                         CONF_QUEUE_DELAY, DEFAULT_QUEUE_DELAY
                     ),
-                ): vol.All(vol.Coerce(float), vol.Clamp(min=0))
+                ): vol.All(vol.Coerce(float), vol.Clamp(min=0)),
+                vol.Required(
+                    CONF_EXTENDED_ENTITY_DISCOVERY,
+                    default=self.config_entry.options.get(
+                        CONF_EXTENDED_ENTITY_DISCOVERY,
+                        DEFAULT_EXTENDED_ENTITY_DISCOVERY,
+                    ),
+                ): bool,
             }
         )
         return self.async_show_form(step_id="init", data_schema=data_schema)

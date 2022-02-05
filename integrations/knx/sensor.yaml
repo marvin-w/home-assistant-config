@@ -1,18 +1,18 @@
 # HVAC controller states
 - name: Stellventil.Bad
-  state_address: '3/2/0'
+  state_address: '3/5/7'
   type: 'percent'
 
 - name: Stellventil.WC
-  state_address: '3/2/1'
+  state_address: '3/4/9'
   type: 'percent'
 
 - name: Stellventil.Buero1
-  state_address: '3/2/2'
+  state_address: '3/4/10'
   type: 'percent'
 
 - name: Stellventil.Buero2
-  state_address: '3/2/3'
+  state_address: '3/4/11'
   type: 'percent'
 
 - name: Stellventil.Abstellraum
@@ -45,15 +45,15 @@
 
 - name: Weather.BrightnessEast
   state_address: '7/0/4'
-  type: 'brightness'
+  type: 'illuminance'
 
 - name: Weather.BrightnessWest
   state_address: '7/0/3'
-  type: 'brightness'
+  type: 'illuminance'
 
 - name: Weather.BrightnessSouth
   state_address: '7/0/5'
-  type: 'brightness'
+  type: 'illuminance'
 
 - name: Weather.WindSpeed
   state_address: '7/0/2'
