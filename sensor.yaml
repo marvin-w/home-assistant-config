@@ -25,6 +25,26 @@
     - type: disk_use_percent
       arg: /
 
+# Rest sensors from microservices
+- platform: rest
+  resource: https://trash-service.marvin-wichmann.de/trash
+  name: trash_appointment
+  value_template: '{{ value_json.name }}'
+
+- platform: rest
+  resource: https://reminder-service.marvin-wichmann.de/reminders/pill
+  name: pill_reminder
+  value_template: '{{ value_json.hoursLeft }}'
+
+- platform: rest
+  resource: https://reminder-service.marvin-wichmann.de/reminders/daily
+  name: daily_reminder
+  value_template: '{{ value_json.hoursLeft }}'
+
+- platform: rest
+  resource: https://trash-service.marvin-wichmann.de/trash/days
+  name: trash_appointment_days
+
 - platform: mqtt
   name: garage_door_time_in_state
   state_topic: 'garadget/garage/status'
@@ -39,14 +59,3 @@
     next_trash:
       friendly_name: 'KNX Nächste Müllleerung Fixed length 14'
       value_template: '{{ states("sensor.trash_appointment")[0:14] }}'
-    trash_appointment:
-      friendly_name: 'Nächste Müllleerung'
-      value_template: >
-        {% set trash_date = as_datetime(strptime(state_attr("calendar.marvin_fam_wichmann_de", "start_time"), "")).strftime("%d.%m") %}
-        {% set trash = state_attr("calendar.marvin_fam_wichmann_de", "message") | replace("Kämpfelbach: ", "") %}
-        {{ trash + " am " +  trash_date }}
-    trash_appointment_days:
-      friendly_name: 'Tage bis zur nächsten Müllleerung' 
-      value_template: >
-        {% set trash_date = as_local(as_datetime(strptime(state_attr("calendar.marvin_fam_wichmann_de", "start_time"), ""))) %}
-        {{ (trash_date - as_local(utcnow())).days | int }}

@@ -140,9 +140,6 @@ input_text: !include input_text.yaml
 binary_sensor: !include binary_sensor.yaml
 
 
-google:
-  client_id: !secret g_client_id
-  client_secret: !secret g_secret
 
 intent_script:
   ZonedCleanupIntent:

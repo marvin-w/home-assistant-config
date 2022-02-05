@@ -1,0 +1,14 @@
+---
+    alias: 'Close garage if it has been opened for longer than 7 minutes'
+    initial_state: True
+    id: b25cc898-8f08-41ee-972e-23b4786ec94b
+    trigger:
+      platform: template
+      value_template: "{% if (states.sensor.garage_door_time_in_state.state | string == '7m') and (states.sensor.garage_door_status.state | string == 'open') %}true{% endif %}"
+    action:
+      - service: cover.close_cover
+        entity_id: cover.garage
+      - service: notify.notifiers
+        data:
+          title: Warnung
+          message: Deine Garage war länger als 7 Minuten offen und wurde daher automatisch geschlossen.

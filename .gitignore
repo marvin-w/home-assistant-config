@@ -46,7 +46,7 @@ tts
 www/icons
 www/floorplans
 www/community
-custom_components/*
+custom_components/hacs
 downloads
 icloud
 dlib_faces

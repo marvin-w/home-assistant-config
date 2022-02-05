@@ -12,5 +12,3 @@
   ignore_internal_state: True
 - name: Weather.RainAlarm
   state_address: '7/0/0'
-- name: Door.Ring
-  state_address: '8/0/1'
