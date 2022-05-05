@@ -22,8 +22,9 @@ lovelace:
 # Enables configuration UI
 config:
 
-zwave:
-  usb_path: /dev/ttyACM0
+#TODO: Migrate to ZWave JS
+#zwave:
+#usb_path: /dev/ttyACM0
 
 http:
   ip_ban_enabled: True
@@ -31,8 +32,6 @@ http:
   use_x_forwarded_for: true
   trusted_proxies:
     - !secret trusted_host
-
-updater:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -71,21 +70,7 @@ recorder:
 # Track the sun
 sun:
 
-octoprint:
-  host: !secret octoprint_host
-  api_key: !secret octoprint_api
-
-
 mobile_app:
-
-mqtt:
-  discovery: true
-  discovery_prefix: homeassistant
-  broker: !secret mqtt_host
-  port: 1883
-  client_id: 'Homeassistant'
-  username: svc_user
-  password: !secret mqtt_password
 
 weather:
 - platform: darksky
@@ -109,6 +94,10 @@ notify:
       - service: pushbullet_mwi
       - service: pushbullet_kalo
 
+mqtt:
+  discovery_prefix: homeassistant
+  client_id: 'Homeassistant'
+
 wake_on_lan:
 webostv:
     host: !secret living_room_tv
@@ -127,7 +116,6 @@ media_player: !include media_player.yaml
 
 alert: !include_dir_named alerts/
 switch: !include switch.yaml
-camera: !include camera.yml
 sensor: !include sensor.yaml
 cover: !include cover.yaml
 light: !include light.yaml

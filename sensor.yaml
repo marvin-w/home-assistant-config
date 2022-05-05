@@ -42,11 +42,11 @@
     trash_appointment:
       friendly_name: 'Nächste Müllleerung'
       value_template: >
-        {% set trash_date = as_datetime(strptime(state_attr("calendar.marvin_fam_wichmann_de", "start_time"), "")).strftime("%d.%m") %}
+        {% set trash_date = as_datetime(strptime(state_attr("calendar.marvin_fam_wichmann_de", "start_time"), "%Y-%m-%d %H:%M:%S")).strftime("%d.%m") %}
         {% set trash = state_attr("calendar.marvin_fam_wichmann_de", "message") | replace("Kämpfelbach: ", "") %}
-        {{ trash + " am " +  trash_date }}
+        {{ trash + " - " +  trash_date }}
     trash_appointment_days:
       friendly_name: 'Tage bis zur nächsten Müllleerung'
       value_template: >
-        {% set trash_date = as_local(as_datetime(strptime(state_attr("calendar.marvin_fam_wichmann_de", "start_time"), ""))) %}
+        {% set trash_date = as_local(as_datetime(strptime(state_attr("calendar.marvin_fam_wichmann_de", "start_time"), "%Y-%m-%d %H:%M:%S"))) %}
         {{ (trash_date - as_local(utcnow())).days | int }}
