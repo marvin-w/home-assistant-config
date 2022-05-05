@@ -7,7 +7,7 @@
 			<img src="https://img.shields.io/badge/Branch-master-green.svg?longCache=true"
 				alt="Branch">
 		</a>
-		<img src="https://img.shields.io/badge/haversion-2022.2.0-blue.svg">
+		<img src="https://img.shields.io/badge/haversion-2022.5.0-blue.svg">
 		<img src="https://img.shields.io/badge/automations-29-purple.svg">
 	</p>
 </p>
