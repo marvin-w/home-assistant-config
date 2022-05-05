@@ -7,8 +7,8 @@
 			<img src="https://img.shields.io/badge/Branch-master-green.svg?longCache=true"
 				alt="Branch">
 		</a>
-		<img src="https://img.shields.io/badge/haversion-2021.5.5-blue.svg">
-		<img src="https://img.shields.io/badge/automations-30-purple.svg">
+		<img src="https://img.shields.io/badge/haversion-2022.2.0-blue.svg">
+		<img src="https://img.shields.io/badge/automations-29-purple.svg">
 	</p>
 </p>
 
@@ -34,8 +34,8 @@ Over the past few years I have extended my home with many more integrations. I'm
 - KNX (for lights, climate, covers, door, etc.)
 - ZWave (smart plugs with power meters for those that can not already be controlled with KNX)
 - EnOcean (window handles)
-- Garadget (for my garage door)
-- MQTT (for my vacuum, garadget and also enocean)
+- ESPHome (for my garage door)
+- MQTT (for my vacuum)
 - Synology NAS (monitoring and camera)
 - Spotify (well, for listening to spotify)
 - Onkyo (for my stereo receiver)
